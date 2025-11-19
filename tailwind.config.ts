@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'panafrican-green': '#008000',
-        'panafrican-yellow': '#FCD116',
-        'panafrican-red': '#CE1126',
-        'panafrican-black': '#000000',
+        'primary-purple': '#8A2BE2', // A vibrant purple
+        'secondary-purple': '#9370DB', // A lighter shade of purple
+        'dark-background': '#1A1A1A', // Deep black/dark gray
+        'light-text': '#E0E0E0', // Light gray for text
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

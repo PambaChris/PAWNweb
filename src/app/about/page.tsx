@@ -4,7 +4,7 @@ const AboutPage = () => {
   return (
     <>
       {/* Page Header */}
-      <header className="bg-panafrican-red py-16">
+      <header className="bg-primary-purple py-16">
         <div className="container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl font-bold">About Us</h1>
           <p className="text-lg mt-2">Our Story, Our Mission, Our Vision</p>
@@ -12,11 +12,11 @@ const AboutPage = () => {
       </header>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-dark-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-panafrican-yellow">Our Story</h2>
+              <h2 className="text-3xl font-bold mb-4 text-primary-purple">Our Story</h2>
               <p className="text-gray-300 mb-4">
                 The Pan-African Women's Network was founded in 2020 by a group of visionary women who saw the need for a dedicated platform to connect and empower women of African descent. What started as a small online forum has grown into a global movement.
               </p>
@@ -38,17 +38,17 @@ const AboutPage = () => {
       </section>
 
       {/* Mission and Vision */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-dark-background">
         <div className="container mx-auto px-4 text-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-panafrican-green">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-4 text-primary-purple">Our Mission</h2>
               <p className="text-gray-300 max-w-lg mx-auto">
                 To build a strong, supportive, and collaborative network that fosters personal and professional growth, celebrates our heritage, and drives positive change in our communities and beyond.
               </p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-panafrican-green">Our Vision</h2>
+              <h2 className="text-3xl font-bold mb-4 text-primary-purple">Our Vision</h2>
               <p className="text-gray-300 max-w-lg mx-auto">
                 We envision a world where every woman of African descent has the resources, support, and opportunities to achieve her full potential, creating a powerful legacy for future generations.
               </p>
@@ -58,13 +58,13 @@ const AboutPage = () => {
       </section>
 
       {/* Meet the Team Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-dark-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-panafrican-yellow">Meet Our Leadership</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary-purple">Meet Our Leadership</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {/* Team Member 1 */}
             <div className="text-center">
-              <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-panafrican-red flex items-center justify-center">
+              <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-primary-purple flex items-center justify-center">
                  <span className="text-white text-lg font-bold">Placeholder</span>
               </div>
               <h3 className="text-xl font-bold">Dr. Funmilayo Adebayo</h3>
@@ -72,7 +72,7 @@ const AboutPage = () => {
             </div>
             {/* Team Member 2 */}
             <div className="text-center">
-              <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-panafrican-green flex items-center justify-center">
+              <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-secondary-purple flex items-center justify-center">
                  <span className="text-white text-lg font-bold">Placeholder</span>
               </div>
               <h3 className="text-xl font-bold">Nia Adebayo</h3>
@@ -80,8 +80,8 @@ const AboutPage = () => {
             </div>
             {/* Team Member 3 */}
             <div className="text-center">
-              <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-panafrican-yellow flex items-center justify-center">
-                 <span className="text-black text-lg font-bold">Placeholder</span>
+              <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-primary-purple flex items-center justify-center">
+                 <span className="text-white text-lg font-bold">Placeholder</span>
               </div>
               <h3 className="text-xl font-bold">Chiamaka Nwosu</h3>
               <p className="text-gray-400">Director of Programs</p>
