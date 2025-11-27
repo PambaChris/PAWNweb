@@ -6,8 +6,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
         <div>
           <h2 className="text-2xl font-bold mb-4">
-            <span className="text-primary-lilac">PAW</span>
-            <span className="text-secondary-lilac">N</span>
+            <img src="/P.png" alt="PAWN Logo" className="h-10" />
           </h2>
           <p className="text-light-text">Empowering Pan-African Women.</p>
         </div>

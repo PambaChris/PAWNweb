@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary-lilac': '#C8A2C8', // A classic, soft, pale shade of purple
-        'secondary-lilac': '#E6E6FA', // A very pale purple with a blue tint
-        'light-background': '#FFFFFF', // White background
+        'primary-lilac': '#C900FF',
+        'secondary-lilac': '#DCD0FF',
+        'light-background': '#E6E6FA', // Light lilac background
         'dark-text': '#333333', // Dark gray for text
       },
       backgroundImage: {

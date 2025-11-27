@@ -16,8 +16,7 @@ const Navbar = () => {
       <div className="flex justify-around items-center h-16">
         <div className="text-center">
           <Link href="/" className="text-3xl font-bold">
-            <span className="text-primary-lilac">PAW</span>
-            <span className="text-secondary-lilac">N</span>
+            <img src="/P.png" alt="PAWN Logo" className="h-10" />
           </Link>
         </div>
         <ul className="flex space-x-8">
