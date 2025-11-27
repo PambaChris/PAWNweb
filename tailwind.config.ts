@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         'primary-lilac': '#C900FF',
         'secondary-lilac': '#DCD0FF',
-        'light-background': '#E6E6FA', // Light lilac background
-        'dark-text': '#333333', // Dark gray for text
+        'dark-background': '#000000', // Black background
+        'light-text': '#FFFFFF', // White text
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

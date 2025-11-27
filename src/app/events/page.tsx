@@ -34,14 +34,14 @@ const EventsPage = () => {
     <>
       {/* Page Header */}
       <header className="bg-primary-lilac py-16">
-        <div className="container mx-auto px-4 text-center text-dark-text">
+        <div className="container mx-auto px-4 text-center text-light-text">
           <h1 className="text-4xl font-bold">Events</h1>
           <p className="text-lg mt-2">Connect, Learn, and Grow With Us</p>
         </div>
       </header>
 
       {/* Upcoming Events Section */}
-      <section className="py-20 bg-light-background">
+      <section className="py-20 bg-dark-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary-lilac">Upcoming Events</h2>
           <div className="space-y-12">
@@ -65,7 +65,7 @@ const EventsPage = () => {
       </section>
 
       {/* Past Events Section */}
-      <section className="py-20 bg-light-background">
+      <section className="py-20 bg-dark-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary-lilac">Past Events</h2>
           <div className="max-w-2xl mx-auto">

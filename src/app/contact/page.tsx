@@ -5,14 +5,14 @@ const ContactPage = () => {
     <>
       {/* Page Header */}
       <header className="bg-primary-lilac py-16">
-        <div className="container mx-auto px-4 text-center text-dark-text">
+        <div className="container mx-auto px-4 text-center text-light-text">
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <p className="text-lg mt-2">We would love to hear from you.</p>
         </div>
       </header>
 
       {/* Main Content */}
-      <section className="py-20 bg-light-background">
+      <section className="py-20 bg-dark-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
@@ -22,19 +22,19 @@ const ContactPage = () => {
               <form>
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-gray-300 mb-2">Full Name</label>
-                  <input type="text" id="name" name="name" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-dark-text focus:outline-none focus:border-secondary-lilac" />
+                  <input type="text" id="name" name="name" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="email" className="block text-gray-300 mb-2">Email Address</label>
-                  <input type="email" id="email" name="email" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-dark-text focus:outline-none focus:border-secondary-lilac" />
+                  <input type="email" id="email" name="email" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="subject" className="block text-gray-300 mb-2">Subject</label>
-                  <input type="text" id="subject" name="subject" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-dark-text focus:outline-none focus:border-secondary-lilac" />
+                  <input type="text" id="subject" name="subject" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac" />
                 </div>
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
-                  <textarea id="message" name="message" rows={5} className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-dark-text focus:outline-none focus:border-secondary-lilac"></textarea>
+                  <textarea id="message" name="message" rows={5} className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac"></textarea>
                 </div>
                 <button type="submit" className="w-full bg-primary-lilac text-white font-bold py-3 px-6 rounded-lg hover:bg-secondary-lilac transition-colors duration-300">
                   Send Message
