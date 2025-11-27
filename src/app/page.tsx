@@ -5,8 +5,8 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative h-[60vh] bg-cover bg-center" style={{ backgroundImage: "url('/placeholder-hero.svg')" }}>
-        <div className="absolute inset-0 bg-dark-background bg-opacity-60" />
-        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
+        <div className="absolute inset-0 bg-light-background bg-opacity-60" />
+        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-dark-text">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Empowering Pan-African Women
           </h1>
@@ -20,7 +20,7 @@ export default function Home() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4 text-primary-lilac">Our Mission</h2>
           <p className="text-lg max-w-3xl mx-auto text-gray-300">
@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       {/* Featured Events */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary-lilac">Featured Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -71,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* Latest News */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary-lilac">Latest News</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

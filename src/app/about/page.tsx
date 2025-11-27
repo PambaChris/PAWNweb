@@ -5,14 +5,14 @@ const AboutPage = () => {
     <>
       {/* Page Header */}
       <header className="bg-primary-lilac py-16">
-        <div className="container mx-auto px-4 text-center text-white">
+        <div className="container mx-auto px-4 text-center text-dark-text">
           <h1 className="text-4xl font-bold">About Us</h1>
           <p className="text-lg mt-2">Our Story, Our Mission, Our Vision</p>
         </div>
       </header>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -38,7 +38,7 @@ const AboutPage = () => {
       </section>
 
       {/* Mission and Vision */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4 text-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
@@ -58,14 +58,14 @@ const AboutPage = () => {
       </section>
 
       {/* Meet the Team Section */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary-lilac">Meet Our Leadership</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {/* Team Member 1 */}
             <div className="text-center">
               <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-primary-lilac flex items-center justify-center">
-                 <span className="text-white text-lg font-bold">Placeholder</span>
+                 <span className="text-lg font-bold">Placeholder</span>
               </div>
               <h3 className="text-xl font-bold">Dr. Funmilayo Adebayo</h3>
               <p className="text-gray-400">Founder & President</p>
@@ -73,7 +73,7 @@ const AboutPage = () => {
             {/* Team Member 2 */}
             <div className="text-center">
               <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-secondary-lilac flex items-center justify-center">
-                 <span className="text-white text-lg font-bold">Placeholder</span>
+                 <span className="text-lg font-bold">Placeholder</span>
               </div>
               <h3 className="text-xl font-bold">Nia Adebayo</h3>
               <p className="text-gray-400">Vice President</p>
@@ -81,7 +81,7 @@ const AboutPage = () => {
             {/* Team Member 3 */}
             <div className="text-center">
               <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-primary-lilac flex items-center justify-center">
-                 <span className="text-white text-lg font-bold">Placeholder</span>
+                 <span className="text-lg font-bold">Placeholder</span>
               </div>
               <h3 className="text-xl font-bold">Chiamaka Nwosu</h3>
               <p className="text-gray-400">Director of Programs</p>
@@ -89,7 +89,7 @@ const AboutPage = () => {
             {/* Team Member 4 */}
             <div className="text-center">
               <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-gray-700 flex items-center justify-center">
-                 <span className="text-white text-lg font-bold">Placeholder</span>
+                 <span className="text-lg font-bold">Placeholder</span>
               </div>
               <h3 className="text-xl font-bold">Amina Kante</h3>
               <p className="text-gray-400">Director of Communications</p>

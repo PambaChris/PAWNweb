@@ -5,15 +5,15 @@ const StorePage = () => {
   return (
     <>
       {/* Page Header */}
-      <header className="bg-dark-background py-16">
-        <div className="container mx-auto px-4 text-center text-white">
+      <header className="bg-light-background py-16">
+        <div className="container mx-auto px-4 text-center text-dark-text">
           <h1 className="text-4xl font-bold">Our Merchandise</h1>
           <p className="text-lg mt-2 text-secondary-lilac">Wear Your Support</p>
         </div>
       </header>
 
       {/* Products Grid */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {products.map((product) => (

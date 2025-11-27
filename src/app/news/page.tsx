@@ -37,14 +37,14 @@ const NewsPage = () => {
     <>
       {/* Page Header */}
       <header className="bg-primary-lilac py-16">
-        <div className="container mx-auto px-4 text-center text-white">
+        <div className="container mx-auto px-4 text-center text-dark-text">
           <h1 className="text-4xl font-bold">News & Insights</h1>
           <p className="text-lg mt-2">Stay Informed and Inspired</p>
         </div>
       </header>
 
       {/* Main Content */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-20 bg-light-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             
