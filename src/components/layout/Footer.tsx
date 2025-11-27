@@ -6,19 +6,19 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
         <div>
           <h2 className="text-2xl font-bold mb-4">
-            <span className="text-primary-purple">PAW</span>
-            <span className="text-secondary-purple">N</span>
+            <span className="text-primary-lilac">PAW</span>
+            <span className="text-secondary-lilac">N</span>
           </h2>
           <p className="text-light-text">Empowering Pan-African Women.</p>
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><Link href="/about" className="hover:text-secondary-purple">About Us</Link></li>
-            <li><Link href="/events" className="hover:text-secondary-purple">Events</Link></li>
-            <li><Link href="/news" className="hover:text-secondary-purple">News</Link></li>
-            <li><Link href="/store" className="hover:text-secondary-purple">Store</Link></li>
-            <li><Link href="/contact" className="hover:text-secondary-purple">Contact</Link></li>
+            <li><Link href="/about" className="hover:text-secondary-lilac">About Us</Link></li>
+            <li><Link href="/events" className="hover:text-secondary-lilac">Events</Link></li>
+            <li><Link href="/news" className="hover:text-secondary-lilac">News</Link></li>
+            <li><Link href="/store" className="hover:text-secondary-lilac">Store</Link></li>
+            <li><Link href="/contact" className="hover:text-secondary-lilac">Contact</Link></li>
           </ul>
         </div>
         <div>
@@ -35,7 +35,7 @@ const Footer = () => {
           <p className="text-light-text mb-4">Subscribe to our newsletter for updates.</p>
           <form className="flex">
             <input type="email" className="w-full rounded-l-md px-4 py-2 bg-gray-700 text-white" placeholder="Enter your email" />
-            <button className="bg-primary-purple hover:bg-secondary-purple text-white font-bold rounded-r-md px-4 py-2">Subscribe</button>
+            <button className="bg-primary-lilac hover:bg-secondary-lilac text-white font-bold rounded-r-md px-4 py-2">Subscribe</button>
           </form>
         </div>
       </div>

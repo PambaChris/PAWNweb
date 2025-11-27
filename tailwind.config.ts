@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary-purple': '#8A2BE2', // A vibrant purple
-        'secondary-purple': '#9370DB', // A lighter shade of purple
+        'primary-lilac': '#C8A2C8', // A classic, soft, pale shade of purple
+        'secondary-lilac': '#E6E6FA', // A very pale purple with a blue tint
         'dark-background': '#1A1A1A', // Deep black/dark gray
         'light-text': '#E0E0E0', // Light gray for text
       },

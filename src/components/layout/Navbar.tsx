@@ -14,15 +14,15 @@ const Navbar = () => {
     <aside className="hidden md:flex w-64 h-screen bg-dark-background text-white flex-col p-4 shadow-lg">
       <div className="text-center py-4 mb-8">
         <Link href="/" className="text-3xl font-bold">
-          <span className="text-primary-purple">PAW</span>
-          <span className="text-secondary-purple">N</span>
+          <span className="text-primary-lilac">PAW</span>
+          <span className="text-secondary-lilac">N</span>
         </Link>
       </div>
       <nav className="flex-1">
         <ul className="space-y-4">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="flex items-center p-2 rounded-lg hover:bg-gray-700 hover:text-secondary-purple transition-colors duration-200">
+              <Link href={link.href} className="flex items-center p-2 rounded-lg hover:bg-gray-700 hover:text-secondary-lilac transition-colors duration-200">
                 {link.label}
               </Link>
             </li>
@@ -30,7 +30,7 @@ const Navbar = () => {
         </ul>
       </nav>
       <div className="mt-auto">
-        <Link href="/booking" className="block w-full text-center bg-primary-purple text-white font-bold py-3 px-6 rounded-full hover:bg-secondary-purple transition-colors duration-300">
+        <Link href="/booking" className="block w-full text-center bg-primary-lilac text-white font-bold py-3 px-6 rounded-full hover:bg-secondary-lilac transition-colors duration-300">
             Book Appointment
         </Link>
       </div>

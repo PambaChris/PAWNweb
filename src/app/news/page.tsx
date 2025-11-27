@@ -36,7 +36,7 @@ const NewsPage = () => {
   return (
     <>
       {/* Page Header */}
-      <header className="bg-primary-purple py-16">
+      <header className="bg-primary-lilac py-16">
         <div className="container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl font-bold">News & Insights</h1>
           <p className="text-lg mt-2">Stay Informed and Inspired</p>
@@ -57,11 +57,11 @@ const NewsPage = () => {
                       <Image src={article.image} alt={article.title} width={400} height={300} className="object-cover w-full h-full" />
                     </div>
                     <div className="p-8 md:w-2/3">
-                      <p className="text-sm text-secondary-purple mb-2">{article.category}</p>
+                      <p className="text-sm text-secondary-lilac mb-2">{article.category}</p>
                       <h3 className="text-2xl font-bold mb-3">{article.title}</h3>
                       <p className="text-gray-400 mb-4 text-sm">Published on {article.date}</p>
                       <p className="text-gray-300 mb-6">{article.excerpt}</p>
-                      <Link href="#" className="text-primary-purple hover:underline font-semibold">
+                      <Link href="#" className="text-primary-lilac hover:underline font-semibold">
                         Read More &rarr;
                       </Link>
                     </div>
@@ -73,9 +73,9 @@ const NewsPage = () => {
             {/* Sidebar */}
             <aside>
               <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold mb-6 text-primary-purple">Categories</h3>
+                <h3 className="text-xl font-bold mb-6 text-primary-lilac">Categories</h3>
                 <ul className="space-y-3 text-gray-300">
-                  <li><a href="#" className="hover:text-secondary-purple">Network News</a></li>
+                  <li><a href="#" className="hover:text-secondary-lilac">Network News</a></li>
                   <li><a href="#" className="hover:text-panafrican-yellow">Member Stories</a></li>
                   <li><a href="#" className="hover:text-panafrican-yellow">Opinion</a></li>
                   <li><a href="#" className="hover:text-panafrican-yellow">Event Recaps</a></li>
@@ -83,11 +83,11 @@ const NewsPage = () => {
                 </ul>
               </div>
               <div className="bg-gray-800 p-8 rounded-lg shadow-lg mt-8">
-                <h3 className="text-xl font-bold mb-6 text-primary-purple">Recent Posts</h3>
+                <h3 className="text-xl font-bold mb-6 text-primary-lilac">Recent Posts</h3>
                 <ul className="space-y-4">
                   {articles.slice(0, 3).map((article, index) => (
                     <li key={index}>
-                      <Link href="#" className="text-gray-300 hover:text-secondary-purple">
+                      <Link href="#" className="text-gray-300 hover:text-secondary-lilac">
                         {article.title}
                       </Link>
                     </li>
