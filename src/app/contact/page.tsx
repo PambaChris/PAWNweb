@@ -1,87 +1,90 @@
+import Button from '@/components/ui/Button';
 import Link from 'next/link';
 
 const ContactPage = () => {
   return (
     <>
       {/* Page Header */}
-      <header className="bg-primary-lilac py-16">
-        <div className="container mx-auto px-4 text-center text-light-text">
-          <h1 className="text-4xl font-bold">Contact Us</h1>
-          <p className="text-lg mt-2">We would love to hear from you.</p>
+      <header className="bg-primary py-24">
+        <div className="container mx-auto px-4 text-center text-white">
+          <h1 className="text-4xl font-bold font-heading">Contact Us</h1>
+          <p className="text-lg mt-2 font-body">We would love to hear from you.</p>
         </div>
       </header>
 
       {/* Main Content */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-28 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             
             {/* Contact Form */}
-            <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold mb-6 text-primary-lilac">Send us a Message</h2>
+            <div className="bg-background p-8 rounded-xl shadow-md">
+              <h2 className="text-2xl font-bold font-heading mb-6 text-foreground">Send us a Message</h2>
               <form>
                 <div className="mb-4">
-                  <label htmlFor="name" className="block text-gray-300 mb-2">Full Name</label>
-                  <input type="text" id="name" name="name" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac" />
+                  <label htmlFor="name" className="block text-muted-foreground mb-2 font-body">Full Name</label>
+                  <input type="text" id="name" name="name" className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="email" className="block text-gray-300 mb-2">Email Address</label>
-                  <input type="email" id="email" name="email" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac" />
+                  <label htmlFor="email" className="block text-muted-foreground mb-2 font-body">Email Address</label>
+                  <input type="email" id="email" name="email" className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="subject" className="block text-gray-300 mb-2">Subject</label>
-                  <input type="text" id="subject" name="subject" className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac" />
+                  <label htmlFor="subject" className="block text-muted-foreground mb-2 font-body">Subject</label>
+                  <input type="text" id="subject" name="subject" className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
                 </div>
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
-                  <textarea id="message" name="message" rows={5} className="w-full bg-gray-200 border border-gray-300 rounded-lg py-2 px-4 text-light-text focus:outline-none focus:border-secondary-lilac"></textarea>
+                  <label htmlFor="message" className="block text-muted-foreground mb-2 font-body">Message</label>
+                  <textarea id="message" name="message" rows={5} className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary"></textarea>
                 </div>
-                <button type="submit" className="w-full bg-primary-lilac text-white font-bold py-3 px-6 rounded-lg hover:bg-secondary-lilac transition-colors duration-300">
+                <Button type="submit" variant="primary" size="lg" className="w-full">
                   Send Message
-                </button>
+                </Button>
               </form>
             </div>
 
             {/* Contact Information */}
-            <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold mb-6 text-primary-lilac">Contact Information</h2>
-              <div className="space-y-6 text-lg">
+            <div className="bg-background p-8 rounded-xl shadow-md">
+              <h2 className="text-2xl font-bold font-heading mb-6 text-foreground">Contact Information</h2>
+              <div className="space-y-6 font-body text-lg">
                 <div className="flex items-start">
-                  <span className="text-primary-lilac mr-4 mt-1">&#9993;</span>
+                  <span className="text-primary mr-4 mt-1">&#9993;</span>
                   <div>
-                    <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-300">contact@pawn.org</p>
+                    <h3 className="font-semibold font-heading">Email</h3>
+                    <p className="text-muted-foreground">contact@pawn.org</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-primary-lilac mr-4 mt-1">&#9742;</span>
+                  <span className="text-primary mr-4 mt-1">&#9742;</span>
                   <div>
-                    <h3 className="font-semibold">Phone</h3>
-                    <p className="text-gray-300">+1 (234) 567-890</p>
+                    <h3 className="font-semibold font-heading">Phone</h3>
+                    <p className="text-muted-foreground">+1 (234) 567-890</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <span className="text-primary-lilac mr-4 mt-1">&#127968;</span>
+                  <span className="text-primary mr-4 mt-1">&#127968;</span>
                   <div>
-                    <h3 className="font-semibold">Headquarters</h3>
-                    <p className="text-gray-300">123 Empowerment Ave, Nairobi, Kenya</p>
+                    <h3 className="font-semibold font-heading">Headquarters</h3>
+                    <p className="text-muted-foreground">123 Empowerment Ave, Nairobi, Kenya</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-8 border-t border-gray-700 pt-6">
-                <h3 className="text-xl font-bold mb-4">Schedule a Consultation</h3>
-                <p className="text-gray-300 mb-4">Book a virtual appointment with our team.</p>
-                <Link href="/booking" className="bg-primary-lilac text-white font-bold py-3 px-6 rounded-full hover:bg-secondary-lilac transition-colors duration-300">
+              <div className="mt-8 border-t border-muted-foreground/50 pt-6">
+                <h3 className="text-xl font-bold font-heading mb-4 text-foreground">Schedule a Consultation</h3>
+                <p className="font-body text-muted-foreground mb-4">Book a virtual appointment with our team.</p>
+                <Link href="/booking" passHref>
+                  <Button variant="primary" size="md">
                     Book Appointment
+                  </Button>
                 </Link>
               </div>
-              <div className="mt-8 border-t border-gray-700 pt-6">
-                <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+              <div className="mt-8 border-t border-muted-foreground/50 pt-6">
+                <h3 className="text-xl font-bold font-heading mb-4 text-foreground">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-400 hover:text-white">Facebook</a>
-                  <a href="#" className="text-gray-400 hover:text-white">Twitter</a>
-                  <a href="#" className="text-gray-400 hover:text-white">Instagram</a>
-                  <a href="#" className="text-gray-400 hover:text-white">LinkedIn</a>
+                  <a href="#" className="text-muted-foreground hover:text-primary">Facebook</a>
+                  <a href="#" className="text-muted-foreground hover:text-primary">Twitter</a>
+                  <a href="#" className="text-muted-foreground hover:text-primary">Instagram</a>
+                  <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
                 </div>
               </div>
             </div>

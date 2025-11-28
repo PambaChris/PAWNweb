@@ -9,10 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary-lilac': '#C900FF',
-        'secondary-lilac': '#DCD0FF',
-        'dark-background': '#000000', // Black background
-        'light-text': '#FFFFFF', // White text
+        'background': '#FFFFFF',
+        'foreground': '#000000',
+        'primary': '#2F2A8B', // Purple for buttons
+        'muted': '#F3F4F6', // Light gray for backgrounds
+        'muted-foreground': '#6B7280', // Medium gray for text
+        'white': '#FFFFFF',
+      },
+      fontFamily: {
+        heading: ['var(--font-body)', 'sans-serif'],
+        body: ['var(--font-body)', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

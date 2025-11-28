@@ -1,36 +1,23 @@
-import Image from 'next/image';
+import ProductCard from '@/components/store/ProductCard';
 import { products } from '@/data/products';
 
 const StorePage = () => {
   return (
     <>
       {/* Page Header */}
-      <header className="bg-dark-background py-16">
-        <div className="container mx-auto px-4 text-center text-light-text">
-          <h1 className="text-4xl font-bold">Our Merchandise</h1>
-          <p className="text-lg mt-2 text-secondary-lilac">Wear Your Support</p>
+      <header className="bg-muted py-24">
+        <div className="container mx-auto px-4 text-center text-foreground">
+          <h1 className="text-4xl font-bold font-heading">Our Merchandise</h1>
+          <p className="text-lg mt-2 font-body text-primary">Wear Your Support</p>
         </div>
       </header>
 
       {/* Products Grid */}
-      <section className="py-20 bg-dark-background">
+      <section className="py-28 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {products.map((product) => (
-              <div key={product.id} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden group">
-                <div className="relative">
-                  <Image src={product.image} alt={product.name} width={500} height={500} className="object-cover w-full h-80" />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                    <button className="text-white bg-primary-lilac text-white font-bold py-3 px-8 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                  <p className="text-primary-lilac text-lg font-semibold">{product.price}</p>
-                </div>
-              </div>
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
