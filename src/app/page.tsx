@@ -1,20 +1,138 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 
+type Ripple = {
+  x: number;
+  y: number;
+  id: number;
+};
+
 export default function Home() {
+  const [ripples, setRipples] = useState<Ripple[]>([]);
+
+  const smoothScrollTo = (elementId: string, duration: number) => {
+    const target = document.getElementById(elementId);
+    if (!target) return;
+
+    const targetPosition = target.getBoundingClientRect().top;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition;
+    let startTime: number | null = null;
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+
+    const ease = (t: number, b: number, c: number, d: number) => {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    requestAnimationFrame(animation);
+  };
+
+  const handleBannerClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const banner = event.currentTarget;
+    const rect = banner.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const newRipple = { x, y, id: Date.now() };
+
+    setRipples(prevRipples => [...prevRipples, newRipple]);
+
+    setTimeout(() => {
+      setRipples(prevRipples => prevRipples.filter(r => r.id !== newRipple.id));
+    }, 600);
+
+    smoothScrollTo('empowering-women-heading', 1000);
+  };
+
   return (
     <>
       {/* Hero Section */}
       <section className="relative">
-        <Link href="#our-mission">
-          <img src="/banner.svg" alt="Pan-African Women's Network Banner" className="w-full h-auto object-cover cursor-pointer" />
-        </Link>
+        <div
+          className="relative w-full h-auto object-cover cursor-pointer"
+          onClick={handleBannerClick}
+        >
+          <img
+            src="/banner.svg"
+            alt="Pan-African Women's Network Banner"
+            className="w-full h-auto"
+          />
+          {ripples.map(ripple => (
+            <span
+              key={ripple.id}
+              className="ripple"
+              style={{
+                left: ripple.x,
+                top: ripple.y,
+                width: '50px',
+                height: '50px',
+                marginTop: '-25px',
+                marginLeft: '-25px',
+                backgroundColor: 'rgba(128, 0, 128, 0.7)',
+              }}
+            />
+          ))}
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+            <div
+              className="w-10 h-10 cursor-pointer bounce"
+              onClick={() => smoothScrollTo('our-mission', 1000)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-10 h-10 text-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 5.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
         <div className="relative bg-muted py-28 md:py-36 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-foreground">
-          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-4">
+          <h1 id="empowering-women-heading" className="text-4xl md:text-6xl font-bold font-heading mb-4">
             Empowering Pan-African Women
           </h1>
           <p className="text-lg md:text-xl font-body mb-6 max-w-2xl">
             Connecting, inspiring, and uplifting women of African descent across the globe.
           </p>
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+            <div
+              className="w-10 h-10 cursor-pointer bounce"
+              onClick={() => smoothScrollTo('our-mission', 1000)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-10 h-10 text-foreground"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 5.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -25,10 +143,31 @@ export default function Home() {
           <p className="text-lg max-w-3xl mx-auto font-body text-muted-foreground">
             To build a strong, supportive, and collaborative network that fosters personal and professional growth, celebrates our heritage, and drives positive change in our communities and beyond.
           </p>
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+            <div
+              className="w-10 h-10 cursor-pointer bounce"
+              onClick={() => smoothScrollTo('featured-events', 1000)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-10 h-10 text-foreground"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 5.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="py-28 bg-muted">
+      <section id="featured-events" className="py-28 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center font-heading mb-16 text-foreground">Featured Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -65,10 +204,31 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+            <div
+              className="w-10 h-10 cursor-pointer bounce"
+              onClick={() => smoothScrollTo('latest-news', 1000)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-10 h-10 text-foreground"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 5.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="py-28 bg-background">
+      <section id="latest-news" className="py-28 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center font-heading mb-16 text-foreground">Latest News</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
