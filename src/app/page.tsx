@@ -66,7 +66,7 @@ export default function Home() {
           <img
             src="/banner.svg"
             alt="Pan-African Women's Network Banner"
-            className="w-full h-auto"
+            className="w-full h-96 md:h-auto"
           />
           {ripples.map(ripple => (
             <span
@@ -85,7 +85,7 @@ export default function Home() {
           ))}
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
             <div
-              className="w-10 h-10 cursor-pointer bounce"
+              className="w-10 h-10 cursor-pointer bounce hidden md:block"
               onClick={() => smoothScrollTo('our-mission', 1000)}
             >
               <svg
@@ -112,7 +112,7 @@ export default function Home() {
           <p className="text-lg md:text-xl font-body mb-6 max-w-2xl">
             Connecting, inspiring, and uplifting women of African descent across the globe.
           </p>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
             <div
               className="w-10 h-10 cursor-pointer bounce"
               onClick={() => smoothScrollTo('our-mission', 1000)}
@@ -143,7 +143,7 @@ export default function Home() {
           <p className="text-lg max-w-3xl mx-auto font-body text-muted-foreground">
             To build a strong, supportive, and collaborative network that fosters personal and professional growth, celebrates our heritage, and drives positive change in our communities and beyond.
           </p>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
             <div
               className="w-10 h-10 cursor-pointer bounce"
               onClick={() => smoothScrollTo('featured-events', 1000)}
@@ -204,7 +204,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
             <div
               className="w-10 h-10 cursor-pointer bounce"
               onClick={() => smoothScrollTo('latest-news', 1000)}
