@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const { to, subject, html } = await request.json();
     const { data, error } = await resend.emails.send({
       from: 'PAWN <info@pawn-blackfeminists.org>',
-      to: ['test@uldoddula.resend.app'], // Temporarily set for testing with Resend's test domain. Remember to change this back!
+      to: ['info@pawn-blackfeminists.org'],
       subject: subject,
       html: html,
     });
