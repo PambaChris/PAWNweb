@@ -1,7 +1,46 @@
+'use client';
+import { useState } from 'react';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
 
 const ContactPage = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        to: 'info@pawn-blackfeminists.org',
+        subject: subject,
+        html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
+      }),
+    });
+
+    if (response.ok) {
+      setSubmitStatus('success');
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+    } else {
+      setSubmitStatus('error');
+    }
+
+    setIsSubmitting(false);
+  };
+
   return (
     <>
       {/* Page Header */}
@@ -20,26 +59,28 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div className="bg-background p-8 rounded-xl shadow-md">
               <h2 className="text-2xl font-bold font-heading mb-6 text-foreground">Send us a Message</h2>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-muted-foreground mb-2 font-body">Full Name</label>
-                  <input type="text" id="name" name="name" className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
+                  <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="email" className="block text-muted-foreground mb-2 font-body">Email Address</label>
-                  <input type="email" id="email" name="email" className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
+                  <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="subject" className="block text-muted-foreground mb-2 font-body">Subject</label>
-                  <input type="text" id="subject" name="subject" className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
+                  <input type="text" id="subject" name="subject" value={subject} onChange={(e) => setSubject(e.target.value)} className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary" />
                 </div>
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-muted-foreground mb-2 font-body">Message</label>
-                  <textarea id="message" name="message" rows={5} className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary"></textarea>
+                  <textarea id="message" name="message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} className="w-full bg-muted border border-muted rounded-xl py-2 px-4 text-foreground focus:outline-none focus:border-primary"></textarea>
                 </div>
-                <Button type="submit" variant="primary" size="lg" className="w-full">
-                  Send Message
+                <Button type="submit" variant="primary" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
+                {submitStatus === 'success' && <p className="text-green-500 mt-4">Message sent successfully!</p>}
+                {submitStatus === 'error' && <p className="text-red-500 mt-4">Something went wrong. Please try again.</p>}
               </form>
             </div>
 
