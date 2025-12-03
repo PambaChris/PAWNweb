@@ -11,9 +11,9 @@ const NewsPage = () => {
       category: 'Network News'
     },
     {
-      title: 'Member Spotlight: Dr. Amina Okoro',
+      title: 'Member Spotlight: Caroline Moko, Earth Justice committee',
       date: 'September 22, 2024',
-      excerpt: 'Meet Dr. Okoro, a trailblazing scientist in renewable energy and a valued member of our network. Read about her journey and impact.',
+      excerpt: 'Meet Caroline Moko, a passionate advocate for Earth Justice and a valued member of our committee. Read about her journey and impact.',
       image: '/news-2.svg',
       category: 'Member Stories'
     },
