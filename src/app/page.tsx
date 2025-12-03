@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type Ripple = {
   x: number;
@@ -59,15 +60,16 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative">
-        <div
-          className="relative w-full h-auto object-cover cursor-pointer"
-          onClick={handleBannerClick}
-        >
-          <img
-            src="/banner.svg"
-            alt="Pan-African Women's Network Banner"
-            className="w-full h-96 md:h-auto"
-          />
+          <div
+            className="relative w-full h-96 md:h-[500px] cursor-pointer" // Added specific height
+            onClick={handleBannerClick}
+          >
+            <Image
+              src="/banner.svg"
+              alt="Pan-African Women's Network Banner"
+              fill // Use fill to cover the parent
+              className="object-cover"
+            />
           {ripples.map(ripple => (
             <span
               key={ripple.id}
@@ -140,17 +142,17 @@ export default function Home() {
       <section className="py-20 bg-background">
         <div>
           <div className="grid grid-cols-1 md:grid-cols-4">
-            <div className="flex justify-center">
-              <img src="/IMG_4384.jpg" alt="Image 1" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            <div className="relative flex justify-center w-full h-64">
+              <Image src="/IMG_4384.jpg" alt="Image 1" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
-            <div className="flex justify-center">
-              <img src="/IMG_4523.jpg" alt="Image 2" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            <div className="relative flex justify-center w-full h-64">
+              <Image src="/IMG_4523.jpg" alt="Image 2" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
-            <div className="flex justify-center">
-              <img src="/IMG_4678.jpg" alt="Image 3" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            <div className="relative flex justify-center w-full h-64">
+              <Image src="/IMG_4678.jpg" alt="Image 3" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
-            <div className="flex justify-center">
-              <img src="/IMG_4533.jpg" alt="Image 4" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            <div className="relative flex justify-center w-full h-64">
+              <Image src="/IMG_4533.jpg" alt="Image 4" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
           </div>
         </div>
@@ -193,7 +195,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* New Event Card 1 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <img src="/WhatsApp Image 2025-12-03 at 4.19.43 PM.jpeg" alt="Solidarity With Palestine" className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image src="/WhatsApp Image 2025-12-03 at 4.19.43 PM.jpeg" alt="Solidarity With Palestine" fill className="object-cover" />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Palestine</h3>
                 <p className="text-muted-foreground font-body mb-4">Join us in a powerful display of solidarity and support for the people of Palestine.</p>
@@ -204,7 +208,9 @@ export default function Home() {
             </div>
             {/* New Event Card 2 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <img src="/KimojaMain.jpeg" alt="Social Justice: Githurai Kimoja Festival" className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image src="/KimojaMain.jpeg" alt="Social Justice: Githurai Kimoja Festival" fill className="object-cover" />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Social Justice: Githurai Kimoja Festival</h3>
                 <p className="text-muted-foreground font-body mb-4">A vibrant festival celebrating social justice and community empowerment in Githurai Kimoja.</p>
@@ -215,7 +221,9 @@ export default function Home() {
             </div>
             {/* New Event Card 3 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-<img src="/internacionalvenezuela.jpeg" alt="Solidarity With Venezuela" className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image src="/internacionalvenezuela.jpeg" alt="Solidarity With Venezuela" fill className="object-cover" />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Venezuela</h3>
                 <p className="text-muted-foreground font-body mb-4">Stand in unity with Venezuela, advocating for justice and self-determination.</p>
@@ -226,7 +234,9 @@ export default function Home() {
             </div>
             {/* New Event Card 4 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <img src="/feministgrassroosts.jpeg" alt="Grassroots Feminist Women Education" className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image src="/feministgrassroosts.jpeg" alt="Grassroots Feminist Women Education" fill className="object-cover" />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Grassroots Feminist Women Education</h3>
                 <p className="text-muted-foreground font-body mb-4">Empowering women through education on grassroots feminist movements and principles.</p>
@@ -237,7 +247,9 @@ export default function Home() {
             </div>
             {/* New Event Card 5 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <img src="/genz fahm.jpeg" alt="Solidarity With The Families Of Victims Of The Gen-Z Protests" className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image src="/genz fahm.jpeg" alt="Solidarity With The Families Of Victims Of The Gen-Z Protests" fill className="object-cover" />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Solidarity With The Families Of Victims Of The Gen-Z Protests</h3>
                 <p className="text-muted-foreground font-body mb-4">Standing in solidarity with families affected by the Gen-Z Protests, advocating for justice and support.</p>
@@ -248,7 +260,9 @@ export default function Home() {
             </div>
             {/* New Event Card 6 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <img src="/studycircle.jpeg" alt="Study Circle" className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image src="/studycircle.jpeg" alt="Study Circle" fill className="object-cover" />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Study Circle</h3>
                 <p className="text-muted-foreground font-body mb-4">Join our study circle to delve into critical topics and foster intellectual growth.</p>

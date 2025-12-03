@@ -13,7 +13,7 @@ const Button = ({
   size = 'md',
   ...props
 }: ButtonProps) => {
-  const baseStyles = 'font-bold rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseStyles = 'font-bold rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300';
 
   const variantStyles = {
     primary: 'bg-primary text-foreground hover:bg-primary/80 focus:ring-primary',
