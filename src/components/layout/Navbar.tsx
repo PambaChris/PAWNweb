@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 const Navbar = () => {
   const { getCartItemCount } = useCart();
   const [isVisible, setIsVisible] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false); // State for mobile menu
 
   const handleScroll = () => {
     // Show navbar when user is at the bottom of the page
@@ -34,41 +35,101 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed bottom-0 left-0 right-0 bg-foreground text-background shadow-md z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}>
-      <div className="flex justify-around items-center h-16">
-        <ul className="flex space-x-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href} className="flex items-center p-2 rounded-md hover:bg-muted hover:text-primary transition-colors duration-200">
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-center space-x-4">
-          <Link href="/cart" className="relative p-2 rounded-md hover:bg-muted transition-colors duration-200 hover:scale-105">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              stroke="none"
-            >
-              <path d="M17 18a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H22v2H6.36L6 6l4 11h11v-2H7.63L7.29 15H19a2 2 0 0 0 1.75-1.03l3.58-6.47c.36-.66-.04-1.43-.72-1.43H6.18L5.73 3.17A.996.996 0 0 0 4.8 2H1v2zm16 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2z"/>
-            </svg>
-            {getCartItemCount() > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                {getCartItemCount()}
-              </span>
+    <nav className={`fixed bottom-0 left-0 right-0 bg-foreground text-background shadow-md z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : 'translate-y-full'} md:static md:translate-y-0 md:bg-transparent md:shadow-none`}>
+      <div className="container mx-auto px-4 flex justify-between items-center h-16 md:h-auto">
+        {/* Logo/Brand Name for desktop */}
+        <Link href="/" className="hidden md:block text-2xl font-bold text-primary hover:text-primary-dark transition-colors duration-200">
+          PAWN
+        </Link>
+
+        {/* Hamburger menu for mobile */}
+        <button className="md:hidden text-foreground focus:outline-none" onClick={() => setMenuOpen(!isMenuOpen)}>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            {isMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
-          </Link>
-          <Link href="/booking" passHref>
-            <Button variant="primary" size="md">
-              Book Appointment
-            </Button>
-          </Link>
+          </svg>
+        </button>
+
+        {/* Desktop Navigation & Cart/Booking */}
+        <div className="hidden md:flex items-center space-x-8">
+          <ul className="flex space-x-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="flex items-center p-2 rounded-md text-foreground hover:bg-muted hover:text-primary transition-colors duration-200">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center space-x-4">
+            <Link href="/cart" className="relative p-2 rounded-md hover:bg-muted transition-colors duration-200 hover:scale-105">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-foreground"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke="none"
+              >
+                <path d="M17 18a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H22v2H6.36L6 6l4 11h11v-2H7.63L7.29 15H19a2 2 0 0 0 1.75-1.03l3.58-6.47c.36-.66-.04-1.43-.72-1.43H6.18L5.73 3.17A.996.996 0 0 0 4.8 2H1v2zm16 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2z"/>
+              </svg>
+              {getCartItemCount() > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                  {getCartItemCount()}
+                </span>
+              )}
+            </Link>
+            <Link href="/booking" passHref>
+              <Button variant="primary" size="md">
+                Book Appointment
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-foreground shadow-md p-4">
+          <ul className="flex flex-col space-y-4">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="block p-2 rounded-md text-background hover:bg-muted hover:text-primary transition-colors duration-200" onClick={() => setMenuOpen(false)}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            <li className="pt-4">
+              <Link href="/cart" className="flex items-center p-2 rounded-md text-background hover:bg-muted hover:text-primary transition-colors duration-200" onClick={() => setMenuOpen(false)}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke="none"
+                >
+                  <path d="M17 18a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H22v2H6.36L6 6l4 11h11v-2H7.63L7.29 15H19a2 2 0 0 0 1.75-1.03l3.58-6.47c.36-.66-.04-1.43-.72-1.43H6.18L5.73 3.17A.996.996 0 0 0 4.8 2H1v2zm16 16a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.11.89-2 2-2z"/>
+                </svg>
+                Cart
+                {getCartItemCount() > 0 && (
+                  <span className="ml-auto bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {getCartItemCount()}
+                  </span>
+                )}
+              </Link>
+            </li>
+            <li>
+              <Link href="/booking" passHref>
+                <Button variant="primary" size="md" className="w-full" onClick={() => setMenuOpen(false)}>
+                  Book Appointment
+                </Button>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
