@@ -4,45 +4,24 @@ import Button from '@/components/ui/Button'; // Import Button component
 const EventsPage = () => {
   const upcomingEvents = [
     {
-      title: 'Solidarity With Palestine',
-      date: 'TBD',
+      title: 'Annual Leadership Summit',
+      date: 'October 25-27, 2024',
       location: 'Online',
-      description: 'Join us in a powerful display of solidarity and support for the people of Palestine.',
+      description: 'A weekend of inspiring talks, workshops, and networking opportunities with leaders from across the diaspora.',
       color: 'bg-muted'
     },
     {
-      title: 'Social Justice: Githurai Kimoja Festival',
-      date: 'TBD',
-      location: 'Githurai Kimoja & Online',
-      description: 'A vibrant festival celebrating social justice and community empowerment in Githurai Kimoja.',
+      title: 'Tech & Innovation Workshop',
+      date: 'November 15, 2024',
+      location: 'Lagos, Nigeria & Online',
+      description: 'A hands-on workshop for women looking to break into or advance in the tech industry.',
       color: 'bg-muted'
     },
     {
-      title: 'Solidarity With Venezuela',
-      date: 'TBD',
-      location: 'Online',
-      description: 'Stand in unity with Venezuela, advocating for justice and self-determination.',
-      color: 'bg-muted'
-    },
-    {
-      title: 'Grassroots Feminist Women Education',
-      date: 'TBD',
-      location: 'Online',
-      description: 'Empowering women through education on grassroots feminist movements and principles.',
-      color: 'bg-muted'
-    },
-    {
-      title: 'Solidarity With The Families Of Victims Of The Gen-Z Protests',
-      date: 'TBD',
-      location: 'Online',
-      description: 'Standing in solidarity with families affected by the Gen-Z Protests, advocating for justice and support.',
-      color: 'bg-muted'
-    },
-    {
-      title: 'Study Circle',
-      date: 'TBD',
-      location: 'Online',
-      description: 'Join our study circle to delve into critical topics and foster intellectual growth.',
+      title: 'Cultural Heritage Gala',
+      date: 'December 12, 2024',
+      location: 'Accra, Ghana',
+      description: 'A celebration of African culture, art, and music. A night to remember!',
       color: 'bg-muted'
     },
   ];
@@ -50,6 +29,12 @@ const EventsPage = () => {
   const pastEvents = [
     { title: 'Financial Literacy Seminar', date: 'August 2024' },
     { title: 'Inaugural Conference', date: 'May 2023' },
+    { title: 'Solidarity With Palestine', date: 'TBD' },
+    { title: 'Social Justice: Githurai Kimoja Festival', date: 'TBD' },
+    { title: 'Solidarity With Venezuela', date: 'TBD' },
+    { title: 'Grassroots Feminist Women Education', date: 'TBD' },
+    { title: 'Solidarity With The Families Of Victims Of The Gen-Z Protests', date: 'TBD' },
+    { title: 'Study Circle', date: 'TBD' },
   ];
 
   return (
