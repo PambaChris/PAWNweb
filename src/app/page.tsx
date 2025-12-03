@@ -136,6 +136,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Images Section */}
+      <section className="py-20 bg-background">
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-4">
+            <div className="flex justify-center">
+              <img src="/IMG_4384.jpg" alt="Image 1" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            </div>
+            <div className="flex justify-center">
+              <img src="/IMG_4523.jpg" alt="Image 2" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            </div>
+            <div className="flex justify-center">
+              <img src="/IMG_4678.jpg" alt="Image 3" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            </div>
+            <div className="flex justify-center">
+              <img src="/IMG_4533.jpg" alt="Image 4" className="w-full h-auto object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission Section */}
       <section id="our-mission" className="py-28 bg-background">
         <div className="container mx-auto px-4 text-center">
@@ -171,59 +191,93 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center font-heading mb-16 text-foreground">Featured Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* New Event Card 1 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="h-48 bg-muted" />
+              <img src="/WhatsApp Image 2025-12-03 at 4.19.43 PM.jpeg" alt="Solidarity With Palestine" className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Annual Leadership Summit</h3>
-                <p className="text-muted-foreground font-body mb-4">Join us for a weekend of inspiring talks, workshops, and networking opportunities.</p>
+                <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Palestine</h3>
+                <p className="text-muted-foreground font-body mb-4">Join us in a powerful display of solidarity and support for the people of Palestine.</p>
                 <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
                 </Link>
               </div>
             </div>
-            {/* Event Card 2 */}
+            {/* New Event Card 2 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="h-48 bg-muted" />
+              <img src="/KimojaMain.jpeg" alt="Social Justice: Githurai Kimoja Festival" className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Tech & Innovation Workshop</h3>
-                <p className="text-muted-foreground font-body mb-4">A hands-on workshop for women looking to break into the tech industry.</p>
+                <h3 className="text-xl font-bold font-heading mb-2">Social Justice: Githurai Kimoja Festival</h3>
+                <p className="text-muted-foreground font-body mb-4">A vibrant festival celebrating social justice and community empowerment in Githurai Kimoja.</p>
                 <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
                 </Link>
               </div>
             </div>
-            {/* Event Card 3 */}
+            {/* New Event Card 3 */}
             <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="h-48 bg-muted" />
+<img src="/internacionalvenezuela.jpeg" alt="Solidarity With Venezuela" className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Cultural Heritage Gala</h3>
-                <p className="text-muted-foreground font-body mb-4">A celebration of African culture, art, and music. A night to remember!</p>
+                <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Venezuela</h3>
+                <p className="text-muted-foreground font-body mb-4">Stand in unity with Venezuela, advocating for justice and self-determination.</p>
+                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                  View Details
+                </Link>
+              </div>
+            </div>
+            {/* New Event Card 4 */}
+            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+              <img src="/feministgrassroosts.jpeg" alt="Grassroots Feminist Women Education" className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold font-heading mb-2">Grassroots Feminist Women Education</h3>
+                <p className="text-muted-foreground font-body mb-4">Empowering women through education on grassroots feminist movements and principles.</p>
+                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                  View Details
+                </Link>
+              </div>
+            </div>
+            {/* New Event Card 5 */}
+            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+              <img src="/genz fahm.jpeg" alt="Solidarity With The Families Of Victims Of The Gen-Z Protests" className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold font-heading mb-2">Solidarity With The Families Of Victims Of The Gen-Z Protests</h3>
+                <p className="text-muted-foreground font-body mb-4">Standing in solidarity with families affected by the Gen-Z Protests, advocating for justice and support.</p>
+                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                  View Details
+                </Link>
+              </div>
+            </div>
+            {/* New Event Card 6 */}
+            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+              <img src="/studycircle.jpeg" alt="Study Circle" className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-bold font-heading mb-2">Study Circle</h3>
+                <p className="text-muted-foreground font-body mb-4">Join our study circle to delve into critical topics and foster intellectual growth.</p>
                 <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
                 </Link>
               </div>
             </div>
           </div>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
-            <div
-              className="w-10 h-10 cursor-pointer bounce"
-              onClick={() => smoothScrollTo('latest-news', 1000)}
+        </div>
+        <div className="mx-auto my-10 flex justify-center">
+          <div
+            className="w-10 h-10 cursor-pointer bounce mx-auto"
+            onClick={() => smoothScrollTo('latest-news', 1000)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-10 h-10 text-foreground"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-10 h-10 text-foreground"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 5.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 5.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
           </div>
         </div>
       </section>
@@ -241,8 +295,8 @@ export default function Home() {
             </div>
             {/* News Item 2 */}
             <div className="bg-muted p-6 rounded-xl shadow-md group transition-transform hover:scale-[1.02]">
-              <h3 className="text-xl font-bold font-heading mb-2">Member Spotlight: Dr. Amina Okoro</h3>
-              <p className="text-muted-foreground font-body mb-4">Meet Dr. Okoro, a trailblazing scientist and a valued member of our network...</p>
+              <h3 className="text-xl font-bold font-heading mb-2">Member Spotlight: Caroline Moko, Earth Justice committee</h3>
+              <p className="text-muted-foreground font-body mb-4">Meet Caroline Moko, a passionate advocate for Earth Justice and a valued member of our committee.</p>
               <Link href="/news" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                 Read More
               </Link>

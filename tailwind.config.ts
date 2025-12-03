@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'background': '#FFFFFF',
-        'foreground': '#000000',
-        'primary': '#2F2A8B', // Purple for buttons
-        'muted': '#F3F4F6', // Light gray for backgrounds
-        'muted-foreground': '#6B7280', // Medium gray for text
-        'white': '#FFFFFF',
+        'background': '#6A4A6A',
+        'foreground': '#FFFFFF',
+        'primary': '#A98C9A', // Purple for buttons
+        'muted': '#846A84', // Light gray for backgrounds
+        'muted-foreground': '#D1D5DB', // Medium gray for text
+        'white': '#4C2A4C',
       },
       fontFamily: {
         heading: ['var(--font-body)', 'sans-serif'],
