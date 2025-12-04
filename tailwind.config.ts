@@ -9,12 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'background': '#F8F0FC', // Very light purple/grey
-        'foreground': '#1F1F1F', // Almost black for text
-        'primary': '#C8A2C8',   // Lilac (user requested)
-        'muted': '#E0D0E8',     // Lighter muted lilac
-        'muted-foreground': '#4A4A4A', // Dark grey for secondary text
-        'white': '#FFFFFF',     // Pure white
+        'background': '#5A385A', // Dark Lilac
+        'foreground': '#E0E0E0', // Light Grey for text
+        'primary': '#DDA0DD',   // Brighter Lilac for accents
+        'muted': '#755575',     // Slightly lighter than background
+        'muted-foreground': '#A0A0A0', // Medium Grey for secondary text
+        'white': '#F0D0F0',     // Very Light Lilac
+        'burnt-orange': '#CC5500', // Burnt orange color for hover effects
+
       },
       fontFamily: {
         heading: ['var(--font-body)', 'sans-serif'],

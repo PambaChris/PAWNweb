@@ -26,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bodyFont.variable} ${headingFont.variable}`}>
+    <html lang="en" className={`${bodyFont.variable} ${headingFont.variable} bg-background`}>
       <body className={`${bodyFont.className} bg-background text-foreground`}>
         <CartProvider>
           <Navbar />
-          <main className="min-h-screen pb-16">
+          <main className="min-h-screen pb-16 bg-background">
             {children}
           </main>
           <Footer />

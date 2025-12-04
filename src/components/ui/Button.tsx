@@ -16,7 +16,7 @@ const Button = ({
   const baseStyles = 'font-bold rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300';
 
   const variantStyles = {
-    primary: 'bg-primary text-foreground hover:bg-primary/80 focus:ring-primary',
+    primary: 'bg-primary text-foreground hover:bg-burnt-orange focus:ring-primary',
     secondary: 'bg-muted text-foreground hover:bg-muted/80 focus:ring-muted',
     ghost: 'bg-transparent text-foreground hover:bg-muted focus:ring-muted',
   };

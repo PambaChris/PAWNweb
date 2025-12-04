@@ -26,7 +26,7 @@ const Footer = () => {
           <p className="font-body mb-4">Subscribe to our newsletter for updates.</p>
           <form className="flex">
             <input type="email" className="w-full rounded-l-lg px-4 py-2 bg-background text-foreground placeholder-muted-foreground border border-muted-foreground/50" placeholder="Enter your email" />
-            <button className="bg-primary hover:bg-primary/80 text-white font-bold rounded-r-lg px-4 py-2 transition-colors duration-300">Subscribe</button>
+            <button className="bg-primary hover:bg-primary/80 text-background font-bold rounded-r-lg px-4 py-2 transition-colors duration-300">Subscribe</button>
           </form>
         </div>
       </div>

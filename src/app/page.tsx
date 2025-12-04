@@ -160,30 +160,40 @@ export default function Home() {
 
       {/* Mission Section */}
       <section id="our-mission" className="py-28 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold font-heading mb-6 text-primary">Our Mission</h2>
-          <p className="text-lg max-w-3xl mx-auto font-body text-muted-foreground">
-            To build a strong, supportive, and collaborative network that fosters personal and professional growth, celebrates our heritage, and drives positive change in our communities and beyond.
-          </p>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
-            <div
-              className="w-10 h-10 cursor-pointer bounce"
-              onClick={() => smoothScrollTo('featured-events', 1000)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-10 h-10 text-foreground"
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0 mb-8 md:mb-0 md:mr-8">
+            <Image
+              src="/fisherwomen.jpeg"
+              alt="Fisherwomen"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold font-heading mb-6 text-primary">Our Mission</h2>
+            <p className="text-lg max-w-3xl mx-auto font-body text-muted-foreground">
+              To build a strong, supportive, and collaborative network that fosters personal and professional growth, celebrates our heritage, and drives positive change in our communities and beyond.
+            </p>
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
+              <div
+                className="w-10 h-10 cursor-pointer bounce"
+                onClick={() => smoothScrollTo('featured-events', 1000)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 5.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-10 h-10 text-foreground"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 5.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
