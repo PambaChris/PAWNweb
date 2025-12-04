@@ -13,7 +13,7 @@ const CartPage = () => {
     return (
       <div className="container mx-auto px-4 py-16 text-center bg-muted text-foreground min-h-screen">
         <h1 className="text-4xl font-bold font-heading mb-4">Your Cart is Empty</h1>
-        <p className="text-lg mb-8 font-body">Looks like you haven't added anything to your cart yet.</p>
+        <p className="text-lg mb-8 font-body">Looks like you haven&#39;t added anything to your cart yet.</p>
         <Link href="/store">
           <Button variant="primary" size="lg">
             Go to Store

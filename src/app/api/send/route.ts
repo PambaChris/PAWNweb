@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    const { to, subject, html } = await request.json();
+    const { subject, html } = await request.json();
     const { data, error } = await resend.emails.send({
       from: 'PAWN <info@pawn-blackfeminists.org>',
       to: ['info@pawn-blackfeminists.org'],

@@ -143,16 +143,16 @@ export default function Home() {
         <div>
           <div className="grid grid-cols-1 md:grid-cols-4">
             <div className="relative flex justify-center w-full h-64">
-              <Image src="/IMG_4384.jpg" alt="Image 1" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+              <Image src="/IMG_4384.jpg" alt="Women in a meeting discussing" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
             <div className="relative flex justify-center w-full h-64">
-              <Image src="/IMG_4523.jpg" alt="Image 2" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+              <Image src="/IMG_4523.jpg" alt="Group of women celebrating" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
             <div className="relative flex justify-center w-full h-64">
-              <Image src="/IMG_4678.jpg" alt="Image 3" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+              <Image src="/IMG_4678.jpg" alt="Women in traditional attire" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
             <div className="relative flex justify-center w-full h-64">
-              <Image src="/IMG_4533.jpg" alt="Image 4" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
+              <Image src="/IMG_4533.jpg" alt="Women participating in a workshop" fill className="object-cover transition-all hover:scale-105 hover:rounded-lg duration-300" />
             </div>
           </div>
         </div>
@@ -204,83 +204,83 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center font-heading mb-16 text-foreground">Featured Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* New Event Card 1 */}
-            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+            <Link href="/events/solidarity-with-palestine" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
                 <Image src="/WhatsApp Image 2025-12-03 at 4.19.43 PM.jpeg" alt="Solidarity With Palestine" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Palestine</h3>
                 <p className="text-muted-foreground font-body mb-4">Join us in a powerful display of solidarity and support for the people of Palestine.</p>
-                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
             {/* New Event Card 2 */}
-            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+            <Link href="/events/social-justice-githurai-kimoja-festival" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
                 <Image src="/KimojaMain.jpeg" alt="Social Justice: Githurai Kimoja Festival" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Social Justice: Githurai Kimoja Festival</h3>
                 <p className="text-muted-foreground font-body mb-4">A vibrant festival celebrating social justice and community empowerment in Githurai Kimoja.</p>
-                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
             {/* New Event Card 3 */}
-            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+            <Link href="/events/solidarity-with-venezuela" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
                 <Image src="/internacionalvenezuela.jpeg" alt="Solidarity With Venezuela" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Venezuela</h3>
                 <p className="text-muted-foreground font-body mb-4">Stand in unity with Venezuela, advocating for justice and self-determination.</p>
-                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
             {/* New Event Card 4 */}
-            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+            <Link href="/events/grassroots-feminist-women-education" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
                 <Image src="/feministgrassroosts.jpeg" alt="Grassroots Feminist Women Education" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Grassroots Feminist Women Education</h3>
                 <p className="text-muted-foreground font-body mb-4">Empowering women through education on grassroots feminist movements and principles.</p>
-                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
             {/* New Event Card 5 */}
-            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+            <Link href="/events/solidarity-with-the-families-of-victims-of-the-gen-z-protests" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
                 <Image src="/genz fahm.jpeg" alt="Solidarity With The Families Of Victims Of The Gen-Z Protests" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Solidarity With The Families Of Victims Of The Gen-Z Protests</h3>
                 <p className="text-muted-foreground font-body mb-4">Standing in solidarity with families affected by the Gen-Z Protests, advocating for justice and support.</p>
-                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
             {/* New Event Card 6 */}
-            <div className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+            <Link href="/events/study-circle" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
                 <Image src="/studycircle.jpeg" alt="Study Circle" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Study Circle</h3>
                 <p className="text-muted-foreground font-body mb-4">Join our study circle to delve into critical topics and foster intellectual growth.</p>
-                <Link href="/events" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
                   View Details
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="mx-auto my-10 flex justify-center">

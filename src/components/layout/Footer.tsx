@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center font-body text-foreground mt-12 pt-12 border-t border-muted-foreground/50">
-        <p>&copy; {new Date().getFullYear()} Pan-African Women's Network. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Pan-African Women&#39;s Network. All Rights Reserved.</p>
       </div>
     </footer>
   );
