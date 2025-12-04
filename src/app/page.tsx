@@ -61,14 +61,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative">
           <div
-            className="relative w-full h-96 md:h-[500px] cursor-pointer" // Added specific height
+            className="relative w-full h-[500px] md:h-[800px] cursor-pointer" // Increased specific height
             onClick={handleBannerClick}
           >
             <Image
               src="/banner.svg"
               alt="Pan-African Women's Network Banner"
               fill // Use fill to cover the parent
-              className="object-cover"
+              className="object-cover object-center"
             />
           {ripples.map(ripple => (
             <span
