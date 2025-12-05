@@ -18,9 +18,9 @@ const Footer = () => {
           <h3 className="text-lg font-semibold font-heading mb-4">Follow Us</h3>
           <div className="flex space-x-4 mb-8">
             {/* Placeholder for actual social media icons */}
-            <a href="#" className="text-foreground hover:text-primary transition-colors duration-300">Facebook</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors duration-300">Twitter</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors duration-300">Instagram</a>
+            <a href="https://www.facebook.com/people/PanAfrican-Womens-Organisation/61584366435167/" className="text-foreground hover:text-primary transition-colors duration-300" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://x.com/Pawn_Feminists" className="text-foreground hover:text-primary transition-colors duration-300" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://www.instagram.com/pan_africanwomensnetwork/" className="text-foreground hover:text-primary transition-colors duration-300" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
           <h3 className="text-lg font-semibold font-heading mb-4">Newsletter</h3>
           <p className="font-body mb-4">Subscribe to our newsletter for updates.</p>

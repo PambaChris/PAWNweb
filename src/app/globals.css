@@ -1,5 +1,30 @@
 html, body {
-  background-color: #5A385A !important; /* Force dark lilac background */
+  background-color: #E0B0FF !important;
+  color: #000000 !important;
+}
+
+.bg-primary {
+  background-color: #E0B0FF !important;
+}
+
+.bg-muted {
+  background-color: #E0B0FF !important;
+}
+
+.bg-white {
+  background-color: #E0B0FF !important;
+}
+
+.text-foreground {
+  color: #000000 !important;
+}
+
+.text-white {
+  color: #E0B0FF !important;
+}
+
+.muted-foreground {
+  color: #000000 !important;
 }
 
 @import "tailwindcss";

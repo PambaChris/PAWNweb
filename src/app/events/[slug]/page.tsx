@@ -137,7 +137,7 @@ const events: Event[] = [
     date: 'TBD',
     slug: 'grassroots-feminist-women-education',
     detailedDescription: "A transformative educational initiative focused on empowering grassroots feminist women. This program provided workshops and training sessions on leadership, advocacy, and human rights, tailored to the unique experiences of women at the community level. The goal was to equip participants with the knowledge and tools to drive social change and advocate for gender equality within their local contexts.",
-    image: '/feministgrassroosts.jpeg'
+    image: '/WhatsApp Image 2025-12-04 at 3.04.08 PM.jpeg'
   },
   {
     title: 'Solidarity With The Families Of Victims Of The Gen-Z Protests',
@@ -187,8 +187,8 @@ export default async function EventPage({ params }: EventPageProps) {
             src={event.image}
             alt={event.title}
             fill
-            style={{ objectFit: 'cover' }}
             className="opacity-30"
+            style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
           />
         )}
         <div className="container mx-auto px-4 text-center relative z-10">

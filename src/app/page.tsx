@@ -232,7 +232,7 @@ export default function Home() {
             {/* New Event Card 3 */}
             <Link href="/events/solidarity-with-venezuela" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
-                <Image src="/internacionalvenezuela.jpeg" alt="Solidarity With Venezuela" fill className="object-cover" />
+                <Image src="/internacionalvenezuela.jpeg" alt="Solidarity With Venezuela" fill className="object-cover" style={{ objectPosition: 'center 30%' }} />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Venezuela</h3>
@@ -245,7 +245,7 @@ export default function Home() {
             {/* New Event Card 4 */}
             <Link href="/events/grassroots-feminist-women-education" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
               <div className="relative w-full h-48">
-                <Image src="/feministgrassroosts.jpeg" alt="Grassroots Feminist Women Education" fill className="object-cover" />
+                <Image src="/WhatsApp Image 2025-12-04 at 3.04.08 PM.jpeg" alt="Grassroots Feminist Women Education" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-heading mb-2">Grassroots Feminist Women Education</h3>
@@ -306,6 +306,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Member Spotlight Section */}
+      <section id="member-spotlight" className="py-28 bg-muted">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0 mb-8 md:mb-0 md:mr-8">
+            <Image
+              src="/WhatsApp Image 2025-12-04 at 3.03.59 PM.jpeg"
+              alt="Caroline Moko"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold font-heading mb-6 text-primary">Member Spotlight: Caroline Moko</h2>
+            <p className="text-lg max-w-3xl mx-auto font-body text-muted-foreground">
+              Caroline Moko, a member of the Pan African Women's Network and leader of the Earth Justice Committee, is an ardent defender of Food Sovereignty and Agroecology. As a farmer, she leads a network of 5,000 predominantly women smallholder farmers, fighting for indigenous farming methods and improved market access for economic self-reliance.
+            </p>
+            <Link href="/news/member-spotlight-caroline-moko" className="text-primary font-body hover:underline mt-4 inline-block">
+              Read More
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section id="latest-news" className="py-28 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center font-heading mb-16 text-foreground">Latest News</h2>
@@ -318,13 +341,8 @@ export default function Home() {
               </Link>
             </div>
             {/* News Item 2 */}
-            <div className="bg-muted p-6 rounded-xl shadow-md group transition-transform hover:scale-[1.02]">
-              <h3 className="text-xl font-bold font-heading mb-2">Member Spotlight: Caroline Moko, Earth Justice committee</h3>
-              <p className="text-muted-foreground font-body mb-4">Meet Caroline Moko, a passionate advocate for Earth Justice and a valued member of our committee.</p>
-              <Link href="/news" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
-                Read More
-              </Link>
-            </div>
+            {/* News Item 2 */}
+
           </div>
         </div>
       </section>

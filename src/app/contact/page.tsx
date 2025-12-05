@@ -22,7 +22,7 @@ const ContactPage = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        to: 'info@pawn-blackfeminists.org',
+        to: 'contact@pawn_blackfeminists.org',
         subject: subject,
         html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
       }),
@@ -92,14 +92,14 @@ const ContactPage = () => {
                   <span className="text-primary mr-4 mt-1">&#9993;</span>
                   <div>
                     <h3 className="font-semibold font-heading">Email</h3>
-                    <p className="text-muted-foreground">contact@pawn.org</p>
+                    <p className="text-muted-foreground">contact@pawn_blackfeminists.org</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-primary mr-4 mt-1">&#9742;</span>
                   <div>
                     <h3 className="font-semibold font-heading">Phone</h3>
-                    <p className="text-muted-foreground">+1 (234) 567-890</p>
+                    <p className="text-muted-foreground">+254 721910280</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -122,9 +122,9 @@ const ContactPage = () => {
               <div className="mt-8 border-t border-muted-foreground/50 pt-6">
                 <h3 className="text-xl font-bold font-heading mb-4 text-foreground">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-muted-foreground hover:text-primary">Facebook</a>
-                  <a href="#" className="text-muted-foreground hover:text-primary">Twitter</a>
-                  <a href="#" className="text-muted-foreground hover:text-primary">Instagram</a>
+                  <a href="https://www.facebook.com/people/PanAfrican-Womens-Organisation/61584366435167/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Facebook</a>
+                  <a href="https://x.com/Pawn_Feminists" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Twitter</a>
+                  <a href="https://www.instagram.com/pan_africanwomensnetwork/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">Instagram</a>
                   <a href="#" className="text-muted-foreground hover:text-primary">LinkedIn</a>
                 </div>
               </div>

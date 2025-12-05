@@ -1,38 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { newsArticles } from '@/data/news'; // Import newsArticles
 
 const NewsPage = () => {
-  const articles = [
-    {
-      title: 'Launches Mentorship Program',
-      date: 'October 1, 2024',
-      excerpt: 'Our new mentorship program connects experienced leaders with aspiring young professionals, fostering a new generation of excellence.',
-      image: '/news-1.svg',
-      category: 'Network News'
-    },
-    {
-      title: 'Member Spotlight: Caroline Moko, Earth Justice committee',
-      date: 'September 22, 2024',
-      excerpt: 'Meet Caroline Moko, a passionate advocate for Earth Justice and a valued member of our committee. Read about her journey and impact.',
-      image: '/news-2.svg',
-      category: 'Member Stories'
-    },
-    {
-      title: 'The Importance of Financial Independence for Women',
-      date: 'September 15, 2024',
-      excerpt: 'An opinion piece on why financial literacy and independence are crucial for empowerment and gender equality.',
-      image: '/news-3.svg',
-      category: 'Opinion'
-    },
-    {
-      title: 'Highlights from the 2024 Annual Leadership Summit',
-      date: 'September 5, 2024',
-      excerpt: 'Relive the best moments from our most successful summit yet, with insights from top speakers and attendees.',
-      image: '/news-4.svg',
-      category: 'Event Recaps'
-    }
-  ];
-
   return (
     <>
       {/* Page Header */}
@@ -51,8 +21,8 @@ const NewsPage = () => {
             {/* Articles List */}
             <div className="lg:col-span-2">
               <div className="space-y-12">
-                {articles.map((article, index) => (
-                  <div key={index} className="bg-background rounded-xl shadow-md overflow-hidden md:flex group transition-transform hover:scale-[1.02]">
+                {newsArticles.map((article, index) => (
+                  <Link href={`/news/${article.slug}`} key={index} className="bg-background rounded-xl shadow-md overflow-hidden md:flex group transition-transform hover:scale-[1.02]">
                     <div className="md:w-1/3">
                       <Image src={article.image} alt={article.title} width={400} height={300} className="object-cover w-full h-full" />
                     </div>
@@ -61,11 +31,11 @@ const NewsPage = () => {
                       <h3 className="text-2xl font-bold font-heading mb-3 text-foreground">{article.title}</h3>
                       <p className="text-muted-foreground mb-4 text-sm font-body">Published on {article.date}</p>
                       <p className="text-muted-foreground mb-6 font-body">{article.excerpt}</p>
-                      <Link href="#" className="text-primary hover:underline font-semibold font-body group-hover:translate-x-1 transition-transform">
+                      <span className="text-primary hover:underline font-semibold font-body group-hover:translate-x-1 transition-transform">
                         Read More &rarr;
-                      </Link>
+                      </span>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -85,9 +55,9 @@ const NewsPage = () => {
               <div className="bg-background p-8 rounded-xl shadow-md mt-8">
                 <h3 className="text-xl font-bold font-heading mb-6 text-foreground">Recent Posts</h3>
                 <ul className="space-y-4">
-                  {articles.slice(0, 3).map((article, index) => (
+                  {newsArticles.slice(0, 3).map((article, index) => (
                     <li key={index}>
-                      <Link href="#" className="text-muted-foreground font-body hover:text-primary">
+                      <Link href={`/news/${article.slug}`} className="text-muted-foreground font-body hover:text-primary">
                         {article.title}
                       </Link>
                     </li>

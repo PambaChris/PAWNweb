@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'background': '#5A385A', // Dark Lilac
-        'foreground': '#E0E0E0', // Light Grey for text
-        'primary': '#DDA0DD',   // Brighter Lilac for accents
-        'muted': '#755575',     // Slightly lighter than background
-        'muted-foreground': '#A0A0A0', // Medium Grey for secondary text
-        'white': '#F0D0F0',     // Very Light Lilac
+        'background': '#E0B0FF', // New Lilac
+        'foreground': '#000000', // Black for text
+        'primary': '#E0B0FF',   // New Lilac for accents
+        'muted': '#E0B0FF',     // New Lilac muted
+        'muted-foreground': '#000000', // Black
+        'white': '#E0B0FF',     // New Lilac white
         'burnt-orange': '#CC5500', // Burnt orange color for hover effects
 
       },
