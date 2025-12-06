@@ -1,3 +1,4 @@
+import { pastEvents } from '@/data/events';
 'use client';
 
 import { useState } from 'react';
@@ -203,84 +204,20 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center font-heading mb-16 text-foreground">Featured Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* New Event Card 1 */}
-            <Link href="/events/solidarity-with-palestine" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="relative w-full h-48">
-                <Image src="/WhatsApp Image 2025-12-03 at 4.19.43 PM.jpeg" alt="Solidarity With Palestine" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Palestine</h3>
-                <p className="text-muted-foreground font-body mb-4">Join us in a powerful display of solidarity and support for the people of Palestine.</p>
-                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
-                  View Details
-                </span>
-              </div>
-            </Link>
-            {/* New Event Card 2 */}
-            <Link href="/events/social-justice-githurai-kimoja-festival" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="relative w-full h-48">
-                <Image src="/KimojaMain.jpeg" alt="Social Justice: Githurai Kimoja Festival" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Social Justice: Githurai Kimoja Festival</h3>
-                <p className="text-muted-foreground font-body mb-4">A vibrant festival celebrating social justice and community empowerment in Githurai Kimoja.</p>
-                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
-                  View Details
-                </span>
-              </div>
-            </Link>
-            {/* New Event Card 3 */}
-            <Link href="/events/solidarity-with-venezuela" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="relative w-full h-48">
-                <Image src="/internacionalvenezuela.jpeg" alt="Solidarity With Venezuela" fill className="object-cover" style={{ objectPosition: 'center 30%' }} />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Solidarity With Venezuela</h3>
-                <p className="text-muted-foreground font-body mb-4">Stand in unity with Venezuela, advocating for justice and self-determination.</p>
-                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
-                  View Details
-                </span>
-              </div>
-            </Link>
-            {/* New Event Card 4 */}
-            <Link href="/events/grassroots-feminist-women-education" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="relative w-full h-48">
-                <Image src="/WhatsApp Image 2025-12-04 at 3.04.08 PM.jpeg" alt="Grassroots Feminist Women Education" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Grassroots Feminist Women Education</h3>
-                <p className="text-muted-foreground font-body mb-4">Empowering women through education on grassroots feminist movements and principles.</p>
-                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
-                  View Details
-                </span>
-              </div>
-            </Link>
-            {/* New Event Card 5 */}
-            <Link href="/events/solidarity-with-the-families-of-victims-of-the-gen-z-protests" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="relative w-full h-48">
-                <Image src="/genz fahm.jpeg" alt="Solidarity With The Families Of Victims Of The Gen-Z Protests" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Solidarity With The Families Of Victims Of The Gen-Z Protests</h3>
-                <p className="text-muted-foreground font-body mb-4">Standing in solidarity with families affected by the Gen-Z Protests, advocating for justice and support.</p>
-                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
-                  View Details
-                </span>
-              </div>
-            </Link>
-            {/* New Event Card 6 */}
-            <Link href="/events/study-circle" className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
-              <div className="relative w-full h-48">
-                <Image src="/studycircle.jpeg" alt="Study Circle" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold font-heading mb-2">Study Circle</h3>
-                <p className="text-muted-foreground font-body mb-4">Join our study circle to delve into critical topics and foster intellectual growth.</p>
-                <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
-                  View Details
-                </span>
-              </div>
-            </Link>
+            {pastEvents.slice(0, 6).map((event, index) => (
+              <Link href={`/events/${event.slug}`} key={index} className="bg-background rounded-xl overflow-hidden shadow-md group transition-transform hover:scale-[1.02]">
+                <div className="relative w-full h-48">
+                  <Image src={event.image} alt={event.title} fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold font-heading mb-2">{event.title}</h3>
+                  <p className="text-muted-foreground font-body mb-4">{event.date}</p>
+                  <span className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform hover:text-accent-hover">
+                    View Details
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
         <div className="mx-auto my-10 flex justify-center">
@@ -322,7 +259,7 @@ export default function Home() {
             <p className="text-lg max-w-3xl mx-auto font-body text-muted-foreground">
               Caroline Moko, a member of the Pan African Women's Network and leader of the Earth Justice Committee, is an ardent defender of Food Sovereignty and Agroecology. As a farmer, she leads a network of 5,000 predominantly women smallholder farmers, fighting for indigenous farming methods and improved market access for economic self-reliance.
             </p>
-            <Link href="/news/member-spotlight-caroline-moko" className="text-primary font-body hover:underline mt-4 inline-block">
+            <Link href="/news/member-spotlight-caroline-moko" className="text-primary font-body hover:underline hover:text-accent-hover mt-4 inline-block">
               Read More
             </Link>
           </div>
@@ -336,7 +273,7 @@ export default function Home() {
             <div className="bg-muted p-6 rounded-xl shadow-md group transition-transform hover:scale-[1.02]">
               <h3 className="text-xl font-bold font-heading mb-2">Launches Mentorship Program</h3>
               <p className="text-muted-foreground font-body mb-4">Our new mentorship program connects experienced leaders with aspiring young professionals...</p>
-              <Link href="/news" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform">
+              <Link href="/news" className="text-primary font-body hover:underline group-hover:translate-x-1 transition-transform hover:text-accent-hover">
                 Read More
               </Link>
             </div>
