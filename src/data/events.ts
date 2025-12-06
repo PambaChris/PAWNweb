@@ -36,7 +36,7 @@ export const pastEvents = [
     title: 'Inaugural Conference',
     date: 'May 2023',
     slug: 'inaugural-conference',
-    image: ''
+    image: '/inaugural conference.jpg'
   },
   {
     title: 'Solidarity With Palestine',

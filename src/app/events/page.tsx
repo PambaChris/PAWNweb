@@ -44,7 +44,7 @@ const EventsPage = () => {
             {pastEvents.map((event, index) => (
               <Link href={`/events/${event.slug}`} key={index} className="bg-muted rounded-xl group transition-transform hover:scale-[1.02] flex flex-col">
                 <div className="relative w-full h-48">
-                  <Image src={event.image} alt={event.title} fill className="object-cover rounded-t-xl" />
+                  {event.image && <Image src={event.image} alt={event.title} fill className="object-cover rounded-t-xl" />}
                 </div>
                 <div className="p-6 flex flex-col items-center justify-center flex-grow">
                   <span className="text-xl font-semibold font-heading text-foreground text-center">{event.title}</span>
