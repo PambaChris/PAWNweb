@@ -1,5 +1,6 @@
-import { pastEvents } from '@/data/events';
 'use client';
+
+import { pastEvents } from '@/data/events';
 
 import { useState } from 'react';
 import Link from 'next/link';
