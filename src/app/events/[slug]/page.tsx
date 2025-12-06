@@ -68,10 +68,10 @@ export default async function EventPage({ params }: EventPageProps) {
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold font-heading">{event.title}</h1>
           <p className="text-lg md:text-xl mt-4 font-body">
-            {event.date} {event.location ? `| ${event.location}` : ''}
+            {event.date} {(event as any).location ? `| ${(event as any).location}` : ''}
           </p>
-          {event.registrationLink && (
-            <Link href={event.registrationLink} target="_blank" rel="noopener noreferrer">
+          {(event as any).registrationLink && (
+            <Link href={(event as any).registrationLink} target="_blank" rel="noopener noreferrer">
               <button className="mt-8 bg-accent text-accent-foreground px-8 py-3 rounded-lg text-lg font-semibold hover:bg-accent/90 transition-colors duration-300 shadow-lg">
                 Register Now
               </button>
@@ -87,7 +87,7 @@ export default async function EventPage({ params }: EventPageProps) {
             <div className="bg-muted p-8 rounded-xl shadow-md mb-8">
               <h2 className="text-3xl font-bold font-heading mb-4 text-foreground">About This Event</h2>
               <p className="font-body text-muted-foreground leading-relaxed">
-                {(event as any).detailedDescription || event.description || 'No detailed description available.'}
+                {(event as any).detailedDescription || (event as any).description || 'No detailed description available.'}
               </p>
             </div>
 
@@ -137,12 +137,12 @@ export default async function EventPage({ params }: EventPageProps) {
             )}
 
             {/* General Info / Description if no detailed description */}
-            {!(event as any).detailedDescription && (event.description || event.location) && (
+            {!(event as any).detailedDescription && ((event as any).description || (event as any).location) && (
               <div className="bg-muted p-8 rounded-xl shadow-md">
                 <h2 className="text-3xl font-bold font-heading mb-4 text-foreground">General Information</h2>
-                <p className="font-body text-muted-foreground mb-4">{event.description || 'No description available.'}</p>
-                {event.location && (
-                  <p className="font-body text-muted-foreground"><strong>Location:</strong> {event.location}</p>
+                <p className="font-body text-muted-foreground mb-4">{(event as any).description || 'No description available.'}</p>
+                {(event as any).location && (
+                  <p className="font-body text-muted-foreground"><strong>Location:</strong> {(event as any).location}</p>
                 )}
               </div>
             )}
