@@ -36,7 +36,7 @@ export const pastEvents = [
     title: 'Inaugural Conference',
     date: 'May 2023',
     slug: 'inaugural-conference',
-    image: '/news-annual-leadership-summit.jpg'
+    image: ''
   },
   {
     title: 'Solidarity With Palestine',
