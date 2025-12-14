@@ -61,37 +61,37 @@ export const pastEvents = [
   },
   {
     title: 'Solidarity With Palestine',
-    date: 'January 2025',
+    date: 'February 2025',
     slug: 'solidarity-with-palestine',
     image: '/WhatsApp Image 2025-12-03 at 4.19.43 PM.jpeg'
   },
   {
     title: 'Social Justice: Githurai Kimoja Festival',
-    date: 'January 2025',
+    date: 'March 2025',
     slug: 'social-justice-githurai-kimoja-festival',
     image: '/KimojaMain.jpeg'
   },
   {
     title: 'Solidarity With Venezuela',
-    date: 'January 2025',
+    date: 'April 2025',
     slug: 'solidarity-with-venezuela',
     image: '/internacionalvenezuela.jpeg'
   },
   {
     title: 'Grassroots Feminist Women Education',
-    date: 'January 2025',
+    date: 'June 2025',
     slug: 'grassroots-feminist-women-education',
     image: '/feministgrassroosts.jpeg'
   },
   {
     title: 'Solidarity With The Families Of Victims Of The Gen-Z Protests',
-    date: 'January 2025',
+    date: 'July 2025',
     slug: 'solidarity-with-the-families-of-victims-of-the-gen-z-protests',
     image: '/genz fahm.jpeg'
   },
   {
     title: 'Study Circle',
-    date: 'January 2025',
+    date: 'September 2025',
     slug: 'study-circle',
     image: '/studycircle.jpeg'
   },
