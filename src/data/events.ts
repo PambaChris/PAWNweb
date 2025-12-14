@@ -49,49 +49,49 @@ export const pastEvents = [
   },
   {
     title: 'Financial Literacy Seminar',
-    date: 'August 2024',
+    date: 'August 2025',
     slug: 'financial-literacy-seminar',
     image: '/news-financial-independence.jpg'
   },
   {
     title: 'Inaugural Conference',
-    date: 'May 2023',
+    date: 'May 2025',
     slug: 'inaugural-conference',
     image: '/inauguralconference.jpg'
   },
   {
     title: 'Solidarity With Palestine',
-    date: 'TBD',
+    date: 'January 2025',
     slug: 'solidarity-with-palestine',
     image: '/WhatsApp Image 2025-12-03 at 4.19.43 PM.jpeg'
   },
   {
     title: 'Social Justice: Githurai Kimoja Festival',
-    date: 'TBD',
+    date: 'January 2025',
     slug: 'social-justice-githurai-kimoja-festival',
     image: '/KimojaMain.jpeg'
   },
   {
     title: 'Solidarity With Venezuela',
-    date: 'TBD',
+    date: 'January 2025',
     slug: 'solidarity-with-venezuela',
     image: '/internacionalvenezuela.jpeg'
   },
   {
     title: 'Grassroots Feminist Women Education',
-    date: 'TBD',
+    date: 'January 2025',
     slug: 'grassroots-feminist-women-education',
     image: '/feministgrassroosts.jpeg'
   },
   {
     title: 'Solidarity With The Families Of Victims Of The Gen-Z Protests',
-    date: 'TBD',
+    date: 'January 2025',
     slug: 'solidarity-with-the-families-of-victims-of-the-gen-z-protests',
     image: '/genz fahm.jpeg'
   },
   {
     title: 'Study Circle',
-    date: 'TBD',
+    date: 'January 2025',
     slug: 'study-circle',
     image: '/studycircle.jpeg'
   },
