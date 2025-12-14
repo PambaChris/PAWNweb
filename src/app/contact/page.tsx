@@ -22,7 +22,7 @@ const ContactPage = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        to: 'contact@pawn_blackfeminists.org',
+        to: 'info@pawn-blackfeminists.org',
         subject: subject,
         html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
       }),
@@ -92,7 +92,7 @@ const ContactPage = () => {
                   <span className="text-primary mr-4 mt-1">&#9993;</span>
                   <div>
                     <h3 className="font-semibold font-heading">Email</h3>
-                    <p className="text-muted-foreground">contact@pawn_blackfeminists.org</p>
+                    <p className="text-muted-foreground">info@pawn-blackfeminists.org</p>
                   </div>
                 </div>
                 <div className="flex items-start">

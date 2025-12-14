@@ -18,10 +18,10 @@ const AboutPage = () => {
             <div>
               <h2 className="text-3xl font-bold font-heading mb-6 text-foreground">Our Story</h2>
               <p className="font-body text-muted-foreground mb-4">
-                The Pan-African Women&#39;s Network was founded in 2020 by a group of visionary women who saw the need for a dedicated platform to connect and empower women of African descent. What started as a small online forum has grown into a global movement.
+                The Pan-African Women&#39;s Network was **founded in 2020 by visionary women** who saw the need for a dedicated platform to **connect and empower women of African descent**. What started as a small online forum has **grown into a global movement**.
               </p>
               <p className="font-body text-muted-foreground">
-                We are a diverse community of entrepreneurs, professionals, artists, and leaders from all corners of the world, united by a shared heritage and a common goal: to uplift one another and create a lasting legacy of excellence.
+                We are a **diverse community** of entrepreneurs, professionals, artists, and leaders from all corners of the world, **united by a shared heritage and a common goal: to uplift one another and create a lasting legacy of excellence.**
               </p>
             </div>
             <div>
