@@ -30,7 +30,7 @@ export const pastEvents = [
     title: '16 Days of Activism Against Gender-Based Violence and Political Spa',
     date: 'December 9, 2025',
     slug: '16-days-of-activism-against-gender-based-violence-and-political-spa',
-    image: '/news-annual-leadership-summit.jpg',
+    image: '/kuillust.jpeg',
     description: 'The Pan African Women\'s Network partnered with the Kenyatta University center for Gender and Empowerment to hold an event on the 16 Days of Activism against gender based violence and political Spa. Activities included panel discussions,wellness: Music,dancing and art,Political Spa and Plenary on GBV manifestations and especially Technologically Facilitated GBV. The session was enlightening. The event started at 2pm at Kenyatta University.',
     schedule: [
       { time: '2:00pm - 2:10pm', activity: 'Opening Remarks' },
