@@ -26,15 +26,15 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
 
       <header className="px-6 md:px-8 pt-16 pb-12 max-w-6xl mx-auto">
-        <span className="inline-block mb-6 px-3 py-1 border border-clay text-clay text-xs uppercase tracking-widest rounded-full">
+        <span className="inline-block mb-6 px-3 py-1 border border-grey text-grey text-xs uppercase tracking-widest rounded-full">
           About PAWN
         </span>
         <h1 className="text-5xl md:text-7xl font-serif leading-[0.95] max-w-3xl text-balance">
-          A global movement rooted in <span className="italic text-clay">shared heritage</span>.
+          A global movement rooted in <span className="italic text-grey">shared heritage</span>.
         </h1>
       </header>
 
@@ -69,13 +69,13 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-sand py-24 px-6 md:px-8">
+      <section className="bg-ink text-lilac py-24 px-6 md:px-8">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
           <div>
             <h2 className="text-4xl font-serif mb-6 italic text-gold">
               Our Mission
             </h2>
-            <p className="text-lg leading-relaxed text-sand/90">
+            <p className="text-lg leading-relaxed text-lilac/90">
               To build a strong, supportive, and collaborative network that
               fosters personal and professional growth, celebrates our heritage,
               and drives positive change in our communities and beyond.
@@ -85,7 +85,7 @@ function AboutPage() {
             <h2 className="text-4xl font-serif mb-6 italic text-gold">
               Our Vision
             </h2>
-            <p className="text-lg leading-relaxed text-sand/90">
+            <p className="text-lg leading-relaxed text-lilac/90">
               A world where every woman of African descent has the resources,
               support, and opportunities to achieve her full potential — and
               create a powerful legacy for future generations.
@@ -121,7 +121,7 @@ function AboutPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {leadership.map((l) => (
               <div key={l.name}>
-                <div className="w-full aspect-square rounded-2xl bg-gradient-to-br from-clay/30 to-gold/30 mb-4 grid place-items-center">
+                <div className="w-full aspect-square rounded-2xl bg-gradient-to-br from-grey/30 to-gold/30 mb-4 grid place-items-center">
                   <span className="font-serif italic text-4xl text-ink/40">
                     {l.name
                       .split(" ")
@@ -131,7 +131,7 @@ function AboutPage() {
                   </span>
                 </div>
                 <h3 className="text-xl font-serif">{l.name}</h3>
-                <p className="text-xs uppercase tracking-widest text-clay font-medium mt-1">
+                <p className="text-xs uppercase tracking-widest text-grey font-medium mt-1">
                   {l.role}
                 </p>
               </div>

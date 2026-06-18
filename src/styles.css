@@ -34,9 +34,9 @@
   --color-ring-offset-background: var(--background);
 
   /* PAWN brand tokens */
-  --color-sand: var(--sand);
+  --color-lilac: var(--lilac);
   --color-ink: var(--ink);
-  --color-clay: var(--clay);
+  --color-grey: var(--grey);
   --color-gold: var(--gold);
   --color-cream: var(--cream);
 
@@ -47,22 +47,22 @@
 :root {
   --radius: 0.625rem;
 
-  /* PAWN palette — Modern Heritage */
-  --sand: oklch(0.94 0.018 70);       /* #F2EBE3 warm sand */
+  /* PAWN palette — Updated Lilac & Grey */
+  --lilac: oklch(0.9 0.04 290);        /* soft lilac */
   --cream: oklch(0.97 0.012 80);      /* lighter cream */
   --ink: oklch(0.22 0.005 60);        /* #1E1E1E near-black */
-  --clay: oklch(0.46 0.115 24);       /* #8B322C deep red clay */
+  --grey: oklch(0.6 0 0);             /* neutral grey */
   --gold: oklch(0.72 0.09 55);        /* #CE9461 warm gold */
 
-  /* shadcn-mapped to the PAWN palette */
-  --background: var(--sand);
+  /* shadcn-mapped to the new palette */
+  --background: var(--lilac);
   --foreground: var(--ink);
   --card: var(--cream);
   --card-foreground: var(--ink);
   --popover: var(--cream);
   --popover-foreground: var(--ink);
-  --primary: var(--clay);
-  --primary-foreground: var(--sand);
+  --primary: var(--grey);
+  --primary-foreground: var(--lilac);
   --secondary: oklch(0.9 0.018 70);
   --secondary-foreground: var(--ink);
   --muted: oklch(0.9 0.014 70);
@@ -70,29 +70,29 @@
   --accent: var(--gold);
   --accent-foreground: var(--ink);
   --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: var(--sand);
+  --destructive-foreground: var(--lilac);
   --border: oklch(0.22 0.005 60 / 12%);
   --input: oklch(0.22 0.005 60 / 18%);
-  --ring: var(--clay);
+  --ring: var(--grey);
 }
 
 .dark {
   --background: var(--ink);
-  --foreground: var(--sand);
+  --foreground: var(--lilac);
   --card: oklch(0.28 0.006 60);
-  --card-foreground: var(--sand);
+  --card-foreground: var(--lilac);
   --popover: oklch(0.28 0.006 60);
-  --popover-foreground: var(--sand);
+  --popover-foreground: var(--lilac);
   --primary: var(--gold);
   --primary-foreground: var(--ink);
   --secondary: oklch(0.32 0.007 60);
-  --secondary-foreground: var(--sand);
+  --secondary-foreground: var(--lilac);
   --muted: oklch(0.32 0.007 60);
   --muted-foreground: oklch(0.72 0.012 70);
-  --accent: var(--clay);
-  --accent-foreground: var(--sand);
+  --accent: var(--grey);
+  --accent-foreground: var(--lilac);
   --destructive: oklch(0.65 0.2 22);
-  --destructive-foreground: var(--sand);
+  --destructive-foreground: var(--lilac);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: var(--gold);

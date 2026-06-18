@@ -27,40 +27,40 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
 
   return (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
 
       <header className="px-6 md:px-8 pt-16 pb-12 max-w-6xl mx-auto">
-        <span className="inline-block mb-6 px-3 py-1 border border-clay text-clay text-xs uppercase tracking-widest rounded-full">
+        <span className="inline-block mb-6 px-3 py-1 border border-grey text-grey text-xs uppercase tracking-widest rounded-full">
           Contact
         </span>
         <h1 className="text-5xl md:text-7xl font-serif leading-[0.95] max-w-3xl text-balance">
-          Write to <span className="italic text-clay">us</span>.
+          Write to <span className="italic text-grey">us</span>.
         </h1>
       </header>
 
       <section className="px-6 md:px-8 max-w-6xl mx-auto pb-24 grid md:grid-cols-5 gap-12">
         <div className="md:col-span-2 space-y-8 text-sm leading-relaxed">
           <div>
-            <h2 className="text-xs uppercase tracking-widest text-clay font-bold mb-2">
+            <h2 className="text-xs uppercase tracking-widest text-grey font-bold mb-2">
               General
             </h2>
             <p>info@pawn-blackfeminists.org</p>
           </div>
           <div>
-            <h2 className="text-xs uppercase tracking-widest text-clay font-bold mb-2">
+            <h2 className="text-xs uppercase tracking-widest text-grey font-bold mb-2">
               Membership
             </h2>
             <p>info@pawn-blackfeminists.org</p>
           </div>
           <div>
-            <h2 className="text-xs uppercase tracking-widest text-clay font-bold mb-2">
+            <h2 className="text-xs uppercase tracking-widest text-grey font-bold mb-2">
               Press & Partnerships
             </h2>
             <p>info@pawn-blackfeminists.org</p>
           </div>
           <div>
-            <h2 className="text-xs uppercase tracking-widest text-clay font-bold mb-2">
+            <h2 className="text-xs uppercase tracking-widest text-grey font-bold mb-2">
               Find us
             </h2>
             <p>Chapters across Africa, the Caribbean, Europe, and the Americas.</p>
@@ -96,12 +96,12 @@ function ContactPage() {
                   name="message"
                   required
                   rows={6}
-                  className="w-full bg-sand border border-ink/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-clay"
+                  className="w-full bg-lilac border border-ink/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-grey"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-clay text-sand px-8 py-3 rounded-full text-sm font-medium uppercase tracking-widest hover:bg-ink transition-colors"
+                className="bg-grey text-lilac px-8 py-3 rounded-full text-sm font-medium uppercase tracking-widest hover:bg-ink transition-colors"
               >
                 Send message
               </button>
@@ -139,7 +139,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full bg-sand border border-ink/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-clay"
+        className="w-full bg-lilac border border-ink/15 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-grey"
       />
     </div>
   );

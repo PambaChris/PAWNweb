@@ -34,18 +34,18 @@ function HomePage() {
   const spotlight = news.find((n) => n.slug === "member-spotlight-caroline-moko")!;
 
   return (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
 
       {/* Hero */}
       <header className="px-6 md:px-8 pt-16 pb-24">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="inline-block mb-6 px-3 py-1 border border-clay text-clay text-xs uppercase tracking-widest rounded-full">
+            <span className="inline-block mb-6 px-3 py-1 border border-grey text-grey text-xs uppercase tracking-widest rounded-full">
               Pan-African Women's Network
             </span>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif leading-[0.95] mb-8 text-balance">
-              Connecting the <span className="italic text-clay">Global</span>{" "}
+              Connecting the <span className="italic text-grey">Global</span>{" "}
               Sisterhood.
             </h1>
             <p className="text-xl max-w-md leading-relaxed text-ink/80 mb-10">
@@ -61,7 +61,7 @@ function HomePage() {
               </Link>
               <Link
                 to="/get-involved"
-                className="border border-ink px-8 py-4 rounded-sm font-medium hover:bg-ink hover:text-sand transition-all"
+                className="border border-ink px-8 py-4 rounded-sm font-medium hover:bg-ink hover:text-lilac transition-all"
               >
                 Donate
               </Link>
@@ -74,7 +74,7 @@ function HomePage() {
               className="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm"
               loading="eager"
             />
-            <div className="absolute -bottom-6 -left-6 bg-clay text-sand p-8 max-w-[240px] rounded-lg shadow-xl">
+            <div className="absolute -bottom-6 -left-6 bg-grey text-lilac p-8 max-w-[240px] rounded-lg shadow-xl">
               <p className="font-serif italic text-2xl leading-tight">
                 "Earth justice is gender justice."
               </p>
@@ -84,7 +84,7 @@ function HomePage() {
       </header>
 
       {/* Featured Events */}
-      <section className="bg-ink text-sand py-24 px-6 md:px-8">
+      <section className="bg-ink text-lilac py-24 px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap justify-between items-end gap-6 mb-16">
             <h2 className="text-4xl md:text-5xl font-serif">
@@ -148,7 +148,7 @@ function HomePage() {
             <Link
               to="/news/$slug"
               params={{ slug: spotlight.slug }}
-              className="text-clay font-medium text-sm"
+              className="text-grey font-medium text-sm"
             >
               Read her story →
             </Link>
@@ -178,7 +178,7 @@ function HomePage() {
                     <span className="text-[10px] text-gold font-bold uppercase tracking-widest">
                       {n.category}
                     </span>
-                    <h4 className="text-2xl font-serif mt-1 mb-2 group-hover:text-clay transition-colors">
+                    <h4 className="text-2xl font-serif mt-1 mb-2 group-hover:text-grey transition-colors">
                       {n.title}
                     </h4>
                     <p className="text-ink/70 leading-relaxed">{n.blurb}</p>
@@ -192,7 +192,7 @@ function HomePage() {
 
       {/* Join CTA */}
       <section className="px-6 md:px-8 pb-24">
-        <div className="max-w-6xl mx-auto bg-clay text-sand rounded-3xl p-12 md:p-20 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto bg-grey text-lilac rounded-3xl p-12 md:p-20 relative overflow-hidden">
           <div className="relative z-10 max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-serif leading-tight mb-8 text-balance">
               Your voice belongs in this movement.
@@ -200,13 +200,13 @@ function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/get-involved"
-                className="bg-sand text-clay px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-ink transition-all"
+                className="bg-lilac text-grey px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-gold hover:text-ink transition-all"
               >
                 Become a Member
               </Link>
               <Link
                 to="/contact"
-                className="bg-transparent border border-sand/30 text-sand px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-sand hover:text-clay transition-all"
+                className="bg-transparent border border-lilac/30 text-lilac px-10 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-lilac hover:text-grey transition-all"
               >
                 Get Our Newsletter
               </Link>

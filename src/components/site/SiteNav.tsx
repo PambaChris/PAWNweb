@@ -13,7 +13,7 @@ export function SiteNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-sand/85 backdrop-blur-md border-b border-ink/10">
+    <nav className="sticky top-0 z-50 bg-lilac/85 backdrop-blur-md border-b border-ink/10">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-5">
         <Link
           to="/"
@@ -27,8 +27,8 @@ export function SiteNav() {
             <Link
               key={l.to}
               to={l.to}
-              className="hover:text-clay transition-colors"
-              activeProps={{ className: "text-clay" }}
+              className="hover:text-grey transition-colors"
+              activeProps={{ className: "text-grey" }}
             >
               {l.label}
             </Link>
@@ -38,7 +38,7 @@ export function SiteNav() {
         <div className="flex items-center gap-3">
           <Link
             to="/get-involved"
-            className="hidden sm:inline-flex bg-ink text-sand px-5 py-2 rounded-full text-sm font-medium hover:bg-clay transition-colors"
+            className="hidden sm:inline-flex bg-ink text-lilac px-5 py-2 rounded-full text-sm font-medium hover:bg-grey transition-colors"
           >
             Join Network
           </Link>
@@ -54,7 +54,7 @@ export function SiteNav() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-ink/10 px-6 py-4 flex flex-col gap-3 bg-sand">
+        <div className="md:hidden border-t border-ink/10 px-6 py-4 flex flex-col gap-3 bg-lilac">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -68,7 +68,7 @@ export function SiteNav() {
           <Link
             to="/get-involved"
             onClick={() => setOpen(false)}
-            className="text-sm uppercase tracking-widest text-clay"
+            className="text-sm uppercase tracking-widest text-grey"
           >
             Join Network
           </Link>

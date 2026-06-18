@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-sand border-t border-ink/10 py-16 px-6 md:px-8">
+    <footer className="bg-lilac border-t border-ink/10 py-16 px-6 md:px-8">
       <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-12">
         <div>
           <div className="text-3xl font-serif italic font-semibold mb-6 text-ink">
@@ -18,22 +18,22 @@ export function SiteFooter() {
           </h5>
           <ul className="space-y-3 text-sm">
             <li>
-              <Link to="/about" className="hover:text-clay">
+              <Link to="/about" className="hover:text-grey">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/programs" className="hover:text-clay">
+              <Link to="/programs" className="hover:text-grey">
                 Our Programs
               </Link>
             </li>
             <li>
-              <Link to="/events" className="hover:text-clay">
+              <Link to="/events" className="hover:text-grey">
                 Events Calendar
               </Link>
             </li>
             <li>
-              <Link to="/news" className="hover:text-clay">
+              <Link to="/news" className="hover:text-grey">
                 News & Spotlights
               </Link>
             </li>
@@ -61,7 +61,7 @@ export function SiteFooter() {
             {(["In", "Ig", "Tw"] as const).map((s) => (
               <span
                 key={s}
-                className="w-9 h-9 rounded-full border border-ink/20 grid place-items-center text-xs font-medium hover:bg-ink hover:text-sand cursor-pointer transition-colors"
+                className="w-9 h-9 rounded-full border border-ink/20 grid place-items-center text-xs font-medium hover:bg-ink hover:text-lilac cursor-pointer transition-colors"
               >
                 {s}
               </span>

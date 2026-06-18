@@ -24,11 +24,11 @@ export const Route = createFileRoute("/news/$slug")({
     };
   },
   notFoundComponent: () => (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
       <div className="max-w-3xl mx-auto px-6 py-32 text-center">
         <h1 className="text-5xl font-serif mb-4">Article not found</h1>
-        <Link to="/news" className="text-clay underline">
+        <Link to="/news" className="text-grey underline">
           ← Back to news
         </Link>
       </div>
@@ -36,14 +36,14 @@ export const Route = createFileRoute("/news/$slug")({
     </div>
   ),
   errorComponent: ({ error, reset }) => (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
       <div className="max-w-3xl mx-auto px-6 py-32 text-center">
         <h1 className="text-3xl font-serif mb-4">This article didn't load</h1>
         <p className="text-ink/70 mb-6">{error.message}</p>
         <button
           onClick={reset}
-          className="bg-ink text-sand px-6 py-3 rounded-full text-sm"
+          className="bg-ink text-lilac px-6 py-3 rounded-full text-sm"
         >
           Try again
         </button>
@@ -57,12 +57,12 @@ export const Route = createFileRoute("/news/$slug")({
 function ArticlePage() {
   const { article } = Route.useLoaderData();
   return (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
       <article className="max-w-3xl mx-auto px-6 md:px-8 pt-16 pb-24">
         <Link
           to="/news"
-          className="text-xs uppercase tracking-widest text-clay font-bold"
+          className="text-xs uppercase tracking-widest text-grey font-bold"
         >
           ← All News
         </Link>

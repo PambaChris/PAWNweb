@@ -27,15 +27,15 @@ export const Route = createFileRoute("/news")({
 function NewsIndexPage() {
   const [lead, ...rest] = news;
   return (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
 
       <header className="px-6 md:px-8 pt-16 pb-12 max-w-6xl mx-auto">
-        <span className="inline-block mb-6 px-3 py-1 border border-clay text-clay text-xs uppercase tracking-widest rounded-full">
+        <span className="inline-block mb-6 px-3 py-1 border border-grey text-grey text-xs uppercase tracking-widest rounded-full">
           News
         </span>
         <h1 className="text-5xl md:text-7xl font-serif leading-[0.95] max-w-3xl text-balance">
-          Dispatches from the <span className="italic text-clay">movement</span>.
+          Dispatches from the <span className="italic text-grey">movement</span>.
         </h1>
       </header>
 
@@ -53,14 +53,14 @@ function NewsIndexPage() {
             />
           </div>
           <div className="p-8 md:p-12">
-            <span className="text-xs uppercase tracking-widest text-clay font-bold">
+            <span className="text-xs uppercase tracking-widest text-grey font-bold">
               {lead.category} · {lead.date}
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif mt-3 mb-4 group-hover:text-clay transition-colors">
+            <h2 className="text-3xl md:text-4xl font-serif mt-3 mb-4 group-hover:text-grey transition-colors">
               {lead.title}
             </h2>
             <p className="text-ink/75 leading-relaxed">{lead.blurb}</p>
-            <span className="inline-block mt-6 text-sm text-clay font-medium">
+            <span className="inline-block mt-6 text-sm text-grey font-medium">
               Read more →
             </span>
           </div>
@@ -81,10 +81,10 @@ function NewsIndexPage() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <span className="text-[10px] uppercase tracking-widest text-clay font-bold">
+              <span className="text-[10px] uppercase tracking-widest text-grey font-bold">
                 {n.category} · {n.date}
               </span>
-              <h3 className="text-xl font-serif mt-2 mb-2 group-hover:text-clay transition-colors">
+              <h3 className="text-xl font-serif mt-2 mb-2 group-hover:text-grey transition-colors">
                 {n.title}
               </h3>
               <p className="text-sm text-ink/70 leading-relaxed">{n.blurb}</p>

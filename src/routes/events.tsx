@@ -29,20 +29,20 @@ function EventsPage() {
   const past = events.filter((e) => !e.upcoming);
 
   return (
-    <div className="min-h-screen bg-sand text-ink">
+    <div className="min-h-screen bg-lilac text-ink">
       <SiteNav />
 
       <header className="px-6 md:px-8 pt-16 pb-12 max-w-6xl mx-auto">
-        <span className="inline-block mb-6 px-3 py-1 border border-clay text-clay text-xs uppercase tracking-widest rounded-full">
+        <span className="inline-block mb-6 px-3 py-1 border border-grey text-grey text-xs uppercase tracking-widest rounded-full">
           Events
         </span>
         <h1 className="text-5xl md:text-7xl font-serif leading-[0.95] max-w-3xl text-balance">
-          Gatherings of the <span className="italic text-clay">network</span>.
+          Gatherings of the <span className="italic text-grey">network</span>.
         </h1>
       </header>
 
       <section className="px-6 md:px-8 max-w-6xl mx-auto pb-24">
-        <h2 className="text-2xl uppercase tracking-widest font-sans font-bold text-clay mb-8">
+        <h2 className="text-2xl uppercase tracking-widest font-sans font-bold text-grey mb-8">
           Upcoming
         </h2>
         <div className="grid md:grid-cols-2 gap-8 mb-20">
@@ -88,7 +88,7 @@ function EventCard({
         />
       </div>
       <div className="p-6">
-        <p className="text-xs uppercase tracking-widest text-clay font-bold mb-2">
+        <p className="text-xs uppercase tracking-widest text-grey font-bold mb-2">
           {event.date}
           {event.location ? ` · ${event.location}` : ""}
         </p>
